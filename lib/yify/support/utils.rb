@@ -4,10 +4,21 @@ module Yify
   module Support
     module Utils
 
-      def self.symbolize_keys(hash)
-        hash.inject({}) do |options, (key, value)|
-          options[(key.underscore.to_sym rescue key) || key] = value
-          options
+      def symbolize_keys(hash)
+        hash.inject({}) do |result, (key, value)|
+          new_key = key.class == String ? key.underscore.to_sym : key
+
+          new_value = case value
+                      when Hash
+                        symbolize_keys(value)
+                      when Array
+                        value.map{ |item| symbolize_keys(item) }
+                      else
+                        value
+                      end
+
+          result[new_key] = new_value
+          result
         end
       end
 

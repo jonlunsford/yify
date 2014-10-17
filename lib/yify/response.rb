@@ -7,14 +7,15 @@ module Yify
     def initialize(res)
       @response = res
       @result = {}
+
+      normalize_response
     end
 
     private
 
     def normalize_response
-      result = @response.to_hash
+      result = @response
       result = symbolize_keys(result)
-
       @result.clear
 
       result.each_pair do |key, value|

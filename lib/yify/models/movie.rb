@@ -9,24 +9,24 @@ module Yify
       attribute :director_list, String
       attribute :downloaded, Integer
       attribute :frame_rate, Float
-      attribute :genre_1, String
-      attribute :genre_2, String
+      attribute :genre1, String
+      attribute :genre2, String
       attribute :imdb_code, String
       attribute :imdb_link, String
       attribute :language, String
       attribute :large_cover, String
-      attribute :large_screenshot_1, String
-      attribute :large_screenshot_2, String
-      attribute :large_screenshot_3, String
+      attribute :large_screenshot1, String
+      attribute :large_screenshot2, String
+      attribute :large_screenshot3, String
       attribute :long_description, String
       attribute :medium_cover, String
-      attribute :medium_screenshot_1, String
-      attribute :medium_screenshot_2, String
-      attribute :medium_screenshot_3, String
+      attribute :medium_screenshot1, String
+      attribute :medium_screenshot2, String
+      attribute :medium_screenshot3, String
       attribute :movie_count, String
       attribute :movie_id, Integer
-      attribute :movie_rating, String
-      attribute :movie_run_time, Integer
+      attribute :movie_rating, Float
+      attribute :movie_runtime, Integer
       attribute :movie_title, String
       attribute :movie_title_clean, String
       attribute :movie_url, String

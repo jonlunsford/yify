@@ -1,9 +1,15 @@
 require 'spec_helper'
 
 describe Yify::Response do
-  let(:res) { YAML.load_file(File.join(File.dirname(__FILE__), "fixtures", "movie.yml")) }
+  let(:res) { YAML.load_file(File.join(File.dirname(__FILE__), "fixtures", "movie.yaml")) }
+  let(:movie) { res["movie"].to_hash }
+  let(:klass) { Yify::Response.new(res) }
 
   it "accepts a raw response" do
-    binding.pry
+    expect(klass.response).to eq(res)
   end
-end
+
+  it "hydrates the Movie model" do
+    expect
+  end
+end:L
