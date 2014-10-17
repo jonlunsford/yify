@@ -1,15 +1,17 @@
 require 'spec_helper'
 
 describe Yify::Response do
-  let(:res) { YAML.load_file(File.join(File.dirname(__FILE__), "fixtures", "movie.yaml")) }
-  let(:movie) { res["movie"].to_hash }
-  let(:klass) { Yify::Response.new(res) }
+  let(:klass) { Yify::Response.new({}, :movie) }
 
-  it "accepts a raw response" do
-    expect(klass.response).to eq(res)
+  it "should expose a model" do
+    expect(klass.model).to eq(:movie)
   end
 
-  it "hydrates the Movie model" do
-    expect
+  it "should expose a response" do
+    expect(klass.response).to eq({})
   end
-end:L
+
+  it "should expose a result" do
+    expect(klass.result).to be_a(Yify::Models::Movie)
+  end
+end

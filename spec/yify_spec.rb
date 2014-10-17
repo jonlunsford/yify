@@ -29,7 +29,15 @@ describe Yify::Client do
 
   it "should get movie details", :vcr do
     response = subject.movie(353)
-    expect(response["MovieTitleClean"]).to eq("We Were Soldiers")
+    expect(response.result.movie_title_clean).to eq("We Were Soldiers")
+  end
+
+  it "should return a Movie instance" do
+    VCR.use_cassette("Yify_Client/should_get_movie_details") do
+      response = subject.movie(353)
+
+      expect(response.result).to be_a(Yify::Models::Movie)
+    end
   end
 
   it "should get movie comments", :vcr do

@@ -17,7 +17,8 @@ module Yify
     end
 
     def movie(id)
-      self.class.get("/movie", { query: { id: id } })
+      data = self.class.get("/movie", { query: { id: id } })
+      Yify::Response.new(data, :movie)
     end
 
     def comments(movie_id)
