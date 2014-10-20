@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yts.re/api/profile?hash=<HASH>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - UA Server 9001
+      Date:
+      - Sun, 19 Oct 2014 23:13:02 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      X-Cache:
+      - uncached
+      Accept-Ranges:
+      - bytes
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"UserID":"<USERID>","UserName":"<USERNAME>","JoinDated":"2014-10-20
+        11:41:55","JoinDatedEpoch":1413758515,"LastSeenDate":"2014-10-20 11:57:38","LastSeenDateEpoch":1413759458,"IpAddress":"<IPADDRESS>","NumOfVotesLeft":"1","NumOfRequestsLeft":"1","ProfileActive":1,"TorrentsDownloadedCount":0,"MoviesRequestedCount":0,"CommentCount":0,"ChatTimeSeconds":0,"Avatar":"http:\/\/static.yts.re\/avatar\/default_avatar.jpg","About":null,"UserRole":"Regular
+        User"}'
+    http_version: 
+  recorded_at: Sun, 19 Oct 2014 23:13:02 GMT
+recorded_with: VCR 2.9.3

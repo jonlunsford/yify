@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://yts.re/api/editprofile
+    body:
+      encoding: UTF-8
+      string: hash=<HASH>&about=RUBY%20FTW!
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - ES Server 9001
+      Date:
+      - Sun, 19 Oct 2014 23:26:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '0'
+      X-Cache:
+      - uncached
+      Accept-Ranges:
+      - bytes
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"status":"changes made successfully"}'
+    http_version: 
+  recorded_at: Sun, 19 Oct 2014 23:26:54 GMT
+recorded_with: VCR 2.9.3

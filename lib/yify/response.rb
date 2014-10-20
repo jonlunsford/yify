@@ -9,33 +9,50 @@ module Yify
       @response = res
       @result = {}
 
-      normalize_response
+      normalized_response
     end
 
     private
 
-    def normalize_response
-      result = @response
-      result = symbolize_keys(result)
+    def normalized_response
+      result = symbolize_keys(@response)
+      result = extract(result, @model)
+
       @result.clear
-      
-      if result.is_a?(Hash)
-        @result = hydrate_model(result)
-      else
-        result.each_pair do |key, value|
-          @result[key] = hydrate_model(key, value)
-        end
-      end
+      @result = hydrate_model(result)
     end
 
     def hydrate_model(value)
       begin
-        klass_s = @model.to_s.classify
+        klass_s = map_class(@model).to_s.classify
         klass = "Yify::Models::#{klass_s}".constantize
 
         value.is_a?(Array) ? value.map { |val| klass.new(val) } : klass.new(value) unless value.nil?
       rescue
         value
+      end
+    end
+
+    def extract(value, key)
+      unless value.is_a?(Array)
+        if value.has_key?(key)
+          value[key]
+        else
+          value
+        end
+      else
+        value
+      end
+    end
+    
+    def map_class(model)
+      case model
+      when :movie_list
+        "movie"
+      when :request_list
+        "requested_movie"
+      else
+        model
       end
     end
 

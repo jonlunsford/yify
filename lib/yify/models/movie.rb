@@ -9,6 +9,7 @@ module Yify
       attribute :director_list, String
       attribute :downloaded, Integer
       attribute :frame_rate, Float
+      attribute :genre, String
       attribute :genre1, String
       attribute :genre2, String
       attribute :imdb_code, String
