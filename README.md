@@ -16,9 +16,7 @@ Or install it yourself as:
 
     $ gem install yify
 
-## Usage
-
-Under active development, do not use just yet.
+## Usage;
 
 ## Contributing
 

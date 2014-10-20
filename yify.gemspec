@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Yify::VERSION
   spec.authors       = ["Jon Lunsford"]
   spec.email         = ["jon@capturethecastle.net"]
-  spec.summary       = %q{Yify torrents API}
-  spec.description   = %q{A Ruby wrapper for the Yifi torrents API}
+  spec.summary       = %q{YIFY Torrents API}
+  spec.description   = %q{A Ruby wrapper for the YIFY Torrents API}
   spec.homepage      = "http://github.com/jonlunsford/yify"
   spec.license       = "MIT"
 
