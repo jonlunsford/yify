@@ -1,5 +1,7 @@
 # Yify
 
+[![Gem Version](https://badge.fury.io/rb/yify.svg)](http://badge.fury.io/rb/yify)
+
 A Ruby wrapper for the [Yify torrenst API](http://yify-torrents.com/api/)
 
 ## Installation
