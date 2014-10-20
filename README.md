@@ -16,7 +16,7 @@ Or install it yourself as:
 
     $ gem install yify
 
-## Usage;
+## Usage
 
 Require Yify in your project:
 
