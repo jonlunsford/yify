@@ -25,31 +25,31 @@ Require Yify in your project:
 	require 'yify'
 
 This gem translates the raw JSON coming back from Yify into full fledged Ruby objects. This means you can access properties like this:
-	
+
 	client = Yify::Client.new
 	=> #<Yify::Client:0x007f9b14321ef8>
-	
+
 	movie = client.movie(353).result
 	=> #<Yify::Models::Movie:0x007f9b14360130>
-	
+
 	movie.movie_title
 	=> "We Were Soldiers (2002)"
-	
+
 A `Yify::Response` will always return an untouched hash as well, like this:
-	
+
 	movie = client.movie(353).response
 	=> {"MovieID"=>"353",
  		"MovieUrl"=>"http://yts.to/movie/We_Were_Soldiers_2002",
  		"DateUploaded"=>"2011-08-31 01:04:02",
  		... }
-	
+
 	movie["MovieID"]
 	=> "353"
 
 #### Upcoming Movies, [yify docs](http://yify-torrents.com/api/#upcomingDocs)
 
 Get a list of all upcoming movies.
-	
+
 	client = Yify::Client.new
 	movies = client.upcoming.result
 
@@ -60,7 +60,7 @@ Get a list of movies, this can also be used to search or filter all movies on Yi
 	params = { limit: 50, quality: 720 }
 	client = Yify::Client.new
 	movies = client.list(params).result
-	
+
 Available request parameters:
 
 Parameter |required | Default | Description
@@ -81,7 +81,7 @@ Get a list of movies based on IMDB IDs.
 	params = { imdb_id: ["tt0111161", "tt0068646"] }
 	client = Yify::Client.new
 	movies = client.list_imdb(params).result
-	
+
 Available request parameters:
 
 Parameter |required  | Default | Description
@@ -94,7 +94,7 @@ Get an individual movie.
 
 	client = Yify::Client.new
 	movie = client.movie(353).result
-	
+
 Available request parameters:
 
 Parameter |required  | Default | Description
@@ -149,7 +149,7 @@ Ask Yify for a password recovery email.
 
 	client = Yify::Client.new
 	client.send_password_reset("me@me.com")
-	
+
 Available request parameters:
 
 Parameter |required  | Description
@@ -159,11 +159,11 @@ Parameter |required  | Description
 #### Resetting Password, [yify docs](http://yify-torrents.com/api/#resetPasswordDocs)
 
 Send the new password to Yify.
-	
+
 	params = { code: "xxxxxxxxxx", newpassword: "MyPassword" }
 	client = Yify::Client.new
 	client.reset_password(params)
-	
+
 Available request parameters:
 
 Parameter    |required  | Description
@@ -194,7 +194,7 @@ Get details about a users' profile.
 
 	client = Yify::Client.new
 	profile = client.profile(hash_returned_from_the_login_call)
-	
+
 Available request parameters:
 
 Parameter |required  | Description
@@ -208,7 +208,7 @@ Edit a users' profile.
     params = { hash: hash_returned_from_the_login_call, about: "RUBY FTW!" }
     client = Yify::Client.new
     client.update_profile(params)
-    
+
 Available request parameters:
 
 Parameter     |required  | Description
@@ -227,8 +227,8 @@ Get a list of all currently requested movies.
     params = { page: "confirmed", limit: 2 }
     client = Yifi::Client.new
     requests = client.requests(params)
-    
-    
+
+
 Available request parameters:
 
 Parameter     |required  | Description
@@ -242,11 +242,11 @@ Parameter     |required  | Description
 #### Make Request, [yify docs](https://yts.to/api#makerequestsDocs)
 
 Send a movie request to Yify.
-	
+
     params = { hash: hash_returned_from_the_login_call, request: "tt0111161" }
     client - Yify::Client.new
     client.make_request(params)
-    
+
 Available request parameters:
 
 Parameter     |required  | Description
@@ -261,13 +261,18 @@ Vote for a requested movie.
     params = { hash: hash_returned_from_the_login_call, requestid: 1169 }
     client = Yify::Client.new
     client.vote(params)
-    
+
 Available request parameters:
 
 Parameter     |required  | Description
 --------------|----------|-------------
 `hash`        | **yes**  |The unique hash that will be used as a means of authentication
 `requested`   | **yes**  |The request ID you wish to vote on
+
+## Change Log
+
+- **0.0.2:** Update base_uri from yts.re -> yts.to
+- **0.0.1:** Initial release
 
 ## Contributing
 
