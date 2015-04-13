@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/makerequest
+    uri: http://yts.to/api/makerequest
     body:
       encoding: UTF-8
       string: hash=<HASH>&request=tt0111161

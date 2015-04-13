@@ -39,7 +39,7 @@ A `Yify::Response` will always return an untouched hash as well, like this:
 	
 	movie = client.movie(353).response
 	=> {"MovieID"=>"353",
- 		"MovieUrl"=>"http://yts.re/movie/We_Were_Soldiers_2002",
+ 		"MovieUrl"=>"http://yts.to/movie/We_Were_Soldiers_2002",
  		"DateUploaded"=>"2011-08-31 01:04:02",
  		... }
 	
@@ -188,7 +188,7 @@ Parameter |required  | Description
 `username`| **yes**  |The username of the desired account
 `password`| **yes**  |The username of the desired account
 
-#### Profile, [yify docs](https://yts.re/api#profileDocs)
+#### Profile, [yify docs](https://yts.to/api#profileDocs)
 
 Get details about a users' profile.
 
@@ -201,7 +201,7 @@ Parameter |required  | Description
 ----------|----------|-------------
 `hash`    | **yes**  |The unique hash that will be used as a means of authentication
 
-#### Edit Profile, [yify docs](https://yts.re/api#editProfileDocs)
+#### Edit Profile, [yify docs](https://yts.to/api#editProfileDocs)
 
 Edit a users' profile.
 
@@ -220,7 +220,7 @@ Parameter     |required  | Description
 `old password` | **no**   |The old password as confirmation
 `avatar`      | **no**   |This will be the newest avatar image for the user
 
-#### Requests, [yify docs](https://yts.re/api#requestsDocs)
+#### Requests, [yify docs](https://yts.to/api#requestsDocs)
 
 Get a list of all currently requested movies.
 
@@ -239,7 +239,7 @@ Parameter     |required  | Description
 `sort`        | **no**   |Sorts the results by choose method
 `order`       | **no**   |Orders the results with either ascending or descending
 
-#### Make Request, [yify docs](https://yts.re/api#makerequestsDocs)
+#### Make Request, [yify docs](https://yts.to/api#makerequestsDocs)
 
 Send a movie request to Yify.
 	
@@ -254,7 +254,7 @@ Parameter     |required  | Description
 `hash`        | **yes**  |The unique hash that will be used as a means of authentication
 `request`     | **yes**  |Request input can be: Movie name or IMDB Code or IMDB URL
 
-#### Vote, [yify docs](https://yts.re/api#voteDocs)
+#### Vote, [yify docs](https://yts.to/api#voteDocs)
 
 Vote for a requested movie.
 

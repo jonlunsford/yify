@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.re/api/list?limit=1
+    uri: http://yts.to/api/list?limit=1
     body:
       encoding: US-ASCII
       string: ''
@@ -36,10 +36,10 @@ http_interactions:
       - nosniff
     body:
       encoding: UTF-8
-      string: '{"MovieCount":5579,"MovieList":[{"MovieID":"6062","State":"OK","MovieUrl":"http:\/\/yts.re\/movie\/Persecuted_2014","MovieTitle":"Persecuted
+      string: '{"MovieCount":5579,"MovieList":[{"MovieID":"6062","State":"OK","MovieUrl":"http:\/\/yts.to\/movie\/Persecuted_2014","MovieTitle":"Persecuted
         (2014)","MovieTitleClean":"Persecuted","MovieYear":"2014","AgeRating":"PG-13","DateUploaded":"2014-10-16
-        13:43:47","DateUploadedEpoch":1413420227,"Quality":"720p","CoverImage":"http:\/\/static.yts.re\/attachments\/Persecuted_2014\/poster_med.jpg","ImdbCode":"tt1761005","ImdbLink":"http:\/\/www.imdb.com\/title\/tt1761005\/","Size":"748.23
-        MB","SizeByte":"784579457","MovieRating":"3.9","Genre":"Action","Uploader":"OTTO","UploaderUID":"310615","Downloaded":"3234","TorrentSeeds":"766","TorrentPeers":"955","TorrentUrl":"http:\/\/yts.re\/download\/start\/F3E50819CDA7C0FF953F1B6742BC11247FFD88AC.torrent","TorrentHash":"f3e50819cda7c0ff953f1b6742bc11247ffd88ac","TorrentMagnetUrl":"magnet:?xt=urn:btih:f3e50819cda7c0ff953f1b6742bc11247ffd88ac&dn=Persecuted&tr=http:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.openbittorrent.com:80\/announce&tr=udp:\/\/open.demonii.com:1337\/announce&tr=udp:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.yify-torrents.com\/announce"}]}'
+        13:43:47","DateUploadedEpoch":1413420227,"Quality":"720p","CoverImage":"http:\/\/static.yts.to\/attachments\/Persecuted_2014\/poster_med.jpg","ImdbCode":"tt1761005","ImdbLink":"http:\/\/www.imdb.com\/title\/tt1761005\/","Size":"748.23
+        MB","SizeByte":"784579457","MovieRating":"3.9","Genre":"Action","Uploader":"OTTO","UploaderUID":"310615","Downloaded":"3234","TorrentSeeds":"766","TorrentPeers":"955","TorrentUrl":"http:\/\/yts.to\/download\/start\/F3E50819CDA7C0FF953F1B6742BC11247FFD88AC.torrent","TorrentHash":"f3e50819cda7c0ff953f1b6742bc11247ffd88ac","TorrentMagnetUrl":"magnet:?xt=urn:btih:f3e50819cda7c0ff953f1b6742bc11247ffd88ac&dn=Persecuted&tr=http:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.openbittorrent.com:80\/announce&tr=udp:\/\/open.demonii.com:1337\/announce&tr=udp:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.yify-torrents.com\/announce"}]}'
     http_version: 
   recorded_at: Thu, 16 Oct 2014 05:25:02 GMT
 recorded_with: VCR 2.9.3

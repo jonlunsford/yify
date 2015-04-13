@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/editprofile
+    uri: http://yts.to/api/editprofile
     body:
       encoding: UTF-8
       string: hash=<HASH>&about=RUBY%20FTW!

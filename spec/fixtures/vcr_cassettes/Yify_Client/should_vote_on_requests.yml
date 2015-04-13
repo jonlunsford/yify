@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/vote
+    uri: http://yts.to/api/vote
     body:
       encoding: UTF-8
       string: hash=<HASH>&requestid=1169

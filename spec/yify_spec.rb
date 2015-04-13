@@ -7,7 +7,7 @@ describe Yify::Client do
   end
 
   it "should have a base_uri configured" do
-    expect(subject.class.base_uri).to eq("http://yts.re/api")
+    expect(subject.class.base_uri).to eq("http://yts.to/api")
   end
 
   it "should get upcoming movies", :vcr do

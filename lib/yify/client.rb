@@ -1,13 +1,13 @@
-# A ruby wrapper for the YIFY Torrents API (https://yts.re/api)
+# A ruby wrapper for the YIFY Torrents API (https://yts.to/api)
 
 module Yify
   class Client
     include HTTParty
-    base_uri 'http://yts.re/api'
+    base_uri 'http://yts.to/api'
     format :json
 
     # [GET] upcoming
-    # See: https://yts.re/api#upcomingDocs
+    # See: https://yts.to/api#upcomingDocs
     #
     # A list of all upcoming movies.
     #
@@ -18,7 +18,7 @@ module Yify
     end
 
     # [GET] list
-    # See: https://yts.re/api#listDocs
+    # See: https://yts.to/api#listDocs
     #
     # Get a list of movies, this method can be used to search
     # or filter.
@@ -30,7 +30,7 @@ module Yify
     end
 
     # [GET] list_imbd
-    # See: https://yts.re/api#listimdbDocs
+    # See: https://yts.to/api#listimdbDocs
     #
     # Get a list of movies using a desired list of IMDB IDs.
     #
@@ -41,7 +41,7 @@ module Yify
     end
 
     # [GET] movie
-    # See: https://yts.re/api#movieDocs
+    # See: https://yts.to/api#movieDocs
     #
     # Get movie details.
     #
@@ -52,7 +52,7 @@ module Yify
     end
 
     # [GET] comments
-    # See: https://yts.re/api#commentDocs
+    # See: https://yts.to/api#commentDocs
     #
     # Get comments for the desired movie
     #
@@ -63,7 +63,7 @@ module Yify
     end
 
     # [POST] post_comment
-    # See: https://yts.re/api#commentpostDocs
+    # See: https://yts.to/api#commentpostDocs
     #
     # Add comment to a movie.
     #
@@ -74,7 +74,7 @@ module Yify
     end
 
     # [GET] user
-    # See: https://yts.re/api#userDocs
+    # See: https://yts.to/api#userDocs
     #
     # Get desired users' details.
     #
@@ -85,7 +85,7 @@ module Yify
     end
 
     # [POST] register
-    # See: https://yts.re/api#registerDocs
+    # See: https://yts.to/api#registerDocs
     #
     # Register a new user with Yify.
     #
@@ -96,7 +96,7 @@ module Yify
     end
 
     # [POST] login
-    # See: https://yts.re/api#loginDocs
+    # See: https://yts.to/api#loginDocs
     #
     # Login a Yify user.
     #
@@ -107,7 +107,7 @@ module Yify
     end
 
     # [POST] send_password_reset
-    # https://yts.re/api#passRecoveryDoc
+    # https://yts.to/api#passRecoveryDoc
     #
     # Send a password reset email to the specified email address.
     #
@@ -118,7 +118,7 @@ module Yify
     end
 
     # [POST] reset_password
-    # See: https://yts.re/api#resetPasswordDocs
+    # See: https://yts.to/api#resetPasswordDocs
     #
     # Reset the users' password.
     def reset_password(options)
@@ -127,7 +127,7 @@ module Yify
     end
 
     # [GET] profile
-    # See: https://yts.re/api#profileDocs
+    # See: https://yts.to/api#profileDocs
     #
     # Get a logged in users' profile.
     #
@@ -138,7 +138,7 @@ module Yify
     end
 
     # [POST] update_profile
-    # See: https://yts.re/api#editProfileDocs
+    # See: https://yts.to/api#editProfileDocs
     #
     # update a logged in users' profile.
     #
@@ -149,7 +149,7 @@ module Yify
     end
 
     # [GET] requests
-    # See: https://yts.re/api#requestsDocs
+    # See: https://yts.to/api#requestsDocs
     #
     # Get a list of all requested movies.
     #
@@ -160,7 +160,7 @@ module Yify
     end
 
     # [POST] make_request
-    # See: https://yts.re/api#makerequestsDocs
+    # See: https://yts.to/api#makerequestsDocs
     #
     # Request a movie to be added to Yify.
     #
@@ -171,7 +171,7 @@ module Yify
     end
 
     # [POST] vote
-    # See: https://yts.re/api#voteDocs
+    # See: https://yts.to/api#voteDocs
     #
     # Vote for a requested movie.
     #

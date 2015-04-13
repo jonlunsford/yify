@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/commentpost
+    uri: http://yts.to/api/commentpost
     body:
       encoding: UTF-8
       string: hash=<HASH>&text=RUBY%20FTW!&movieid=353

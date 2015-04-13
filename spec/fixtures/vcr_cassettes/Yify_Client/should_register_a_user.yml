@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/register
+    uri: http://yts.to/api/register
     body:
       encoding: UTF-8
       string: username=<USERNAME>&password=<PASSWORD>&email=<EMAIL>

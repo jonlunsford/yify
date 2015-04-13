@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.re/api/login
+    uri: http://yts.to/api/login
     body:
       encoding: UTF-8
       string: username=<USERNAME>&password=<PASSWORD>
