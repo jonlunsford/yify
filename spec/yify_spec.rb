@@ -17,7 +17,6 @@ describe Yify::Client do
 
   it "should list movies", :vcr do
     response = subject.list_movies({ limit: 1 })
-    pp response
     expect(response.result.count).to eq(1)
   end
 
@@ -27,15 +26,16 @@ describe Yify::Client do
   end
 
   it "should get movie comments", :vcr do
-    response = subject.comments(353)
-    expect(response.result.first.comment_text).to eq("thanxxxxxxx")
+    response = subject.movie_comments(353)
+    expect(response.result.first.comment_text).to eq("thank you")
   end
 
   it "should get user details", :vcr do
-    response = subject.user(16)
-    expect(response.result.user_name).to eq("YIFY")
+    response = subject.user_details({ user_id: 16, with_recently_downloaded: true })
+    expect(response.result.username).to eq("YIFY")
   end
 
+  # TODO
   it "should register a user", :vcr do
     options = { username: ENV["username"], password: ENV["password"], email: ENV["email"] }
     response = subject.register(options)
@@ -94,3 +94,4 @@ describe Yify::Client do
     expect(response.result.status).to include("Vote submission successful")
   end
 end
+

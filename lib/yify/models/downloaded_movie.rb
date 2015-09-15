@@ -1,6 +1,6 @@
 module Yify
   module Models
-    class MovieBase < Base
+    class DownloadedMovie < Base
       attribute :id, Integer
       attribute :url, String
       attribute :imdb_code, String
@@ -11,11 +11,8 @@ module Yify
       attribute :rating, Integer
       attribute :runtime, Integer
       attribute :genres, Array
-      attribute :language, String
-      attribute :mpa_rating, String
-      attribute :date_uploaded, DateTime
-      attribute :date_uploaded_unix, DateTime
-      attribute :torrents, Array[Yify::Models::Torrent]
+      attribute :small_cover_image, String
+      attribute :medium_cover_image, String
     end
   end
 end

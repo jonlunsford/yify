@@ -51,7 +51,7 @@ module Yify
         "movie"
       when :request_list
         "requested_movie"
-      when :upcomming_moview
+      when :upcomming_movies
         "upcomming_movie"
       else
         model

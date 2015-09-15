@@ -58,15 +58,19 @@ module Yify
       Yify::Response.new(data, :movie)
     end
 
-    # [GET] comments
-    # See: https://yts.to/api#commentDocs
+    # [GET] movie_comments
+    # See: https://yts.to/api#movie_comments
     #
     # Get comments for the desired movie
     #
+    # @params
+    #   movie_id: Integer (required)
+    #
     # @returns [Yify::Models::Comment]
-    def comments(movie_id)
-      data = self.class.get("/comments", { query: { movieid: movie_id } })
-      Yify::Response.new(data, :comment)
+
+    def movie_comments(movie_id)
+      data = self.class.get("/movie_comments", { query: { movie_id: movie_id } })
+      Yify::Response.new(data, :comments)
     end
 
     # [POST] post_comment
@@ -75,19 +79,25 @@ module Yify
     # Add comment to a movie.
     #
     # @returns Yify::Models::ApiResponse
+
     def post_comment(params)
       data = self.class.post("/commentpost", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
-    # [GET] user
-    # See: https://yts.to/api#userDocs
+    # [GET] user_details
+    # See: https://yts.to/api#user_details
     #
     # Get desired users' details.
     #
+    # @params
+    #   user_id: Integer (required)
+    #   with_recently_downloaded: Boolean
+    #
     # @returns Yify::Models::User
-    def user(user_id)
-      data = self.class.get("/user", { query: { id: user_id } })
+
+    def user_details(params)
+      data = self.class.get("/user_details", { query: params })
       Yify::Response.new(data, :user)
     end
 
