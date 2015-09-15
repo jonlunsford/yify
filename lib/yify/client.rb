@@ -3,51 +3,58 @@
 module Yify
   class Client
     include HTTParty
-    base_uri 'http://yts.to/api'
+    base_uri 'http://yts.to/api/v2'
     format :json
 
-    # [GET] upcoming
-    # See: https://yts.to/api#upcomingDocs
+    # [GET] list_upcoming
+    # See: https://yts.to/api#list_upcoming
     #
     # A list of all upcoming movies.
     #
     # @returns [Yify::Models::UpcomingMovie]
-    def upcoming
-      data = self.class.get("/upcoming")
-      Yify::Response.new(data, :upcoming_movie)
+
+    def list_upcoming
+      data = self.class.get("/list_upcoming")
+      Yify::Response.new(data, :upcoming_movies)
     end
 
-    # [GET] list
-    # See: https://yts.to/api#listDocs
+    # [GET] list_movies
+    # See: https://yts.to/api#list_movies
     #
     # Get a list of movies, this method can be used to search
     # or filter.
     #
+    # @params
+    #   limit: Integer between 1 - 50 (inclusive)
+    #   page: Integer
+    #   quality: String
+    #   minimum_rating Integer between 0 - 9 (inclusive)
+    #   query_term: String
+    #   genre: String
+    #   sort_by: String (title, year, rating, peers, seeds, download_count, like_count, date_added)
+    #   order_by: String (desc, asc)
+    #   with_rt_ratting: Boolean (returns with rotten tomatoes rating)
+    #
     # @returns [Yify::Models::Movie]
-    def list(options)
-      data = self.class.get("/list", { query: options })
-      Yify::Response.new(data, :movie_list)
+
+    def list_movies(params)
+      data = self.class.get("/list_movies", { query: params })
+      Yify::Response.new(data, :movies)
     end
 
-    # [GET] list_imbd
-    # See: https://yts.to/api#listimdbDocs
-    #
-    # Get a list of movies using a desired list of IMDB IDs.
-    #
-    # @returns [Yify::Models::Movie]
-    def list_imdb(options)
-      data = self.class.get("/listimdb", { query: options })
-      Yify::Response.new(data, :movie_list)
-    end
-
-    # [GET] movie
-    # See: https://yts.to/api#movieDocs
+    # [GET] movie_details
+    # See: https://yts.to/api#movie_details
     #
     # Get movie details.
     #
+    # @params
+    #   movie_id: Integer (required)
+    #   with_images: Boolean
+    #   with_cast: Boolean
+    #
     # @returns Yify::Models::Movie
-    def movie(id)
-      data = self.class.get("/movie", { query: { id: id } })
+    def movie_details(params)
+      data = self.class.get("/movie_details", { query: params })
       Yify::Response.new(data, :movie)
     end
 
@@ -68,8 +75,8 @@ module Yify
     # Add comment to a movie.
     #
     # @returns Yify::Models::ApiResponse
-    def post_comment(options)
-      data = self.class.post("/commentpost", { body: options })
+    def post_comment(params)
+      data = self.class.post("/commentpost", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
@@ -90,8 +97,8 @@ module Yify
     # Register a new user with Yify.
     #
     # @returns Yify::Models::ApiResponse
-    def register(options)
-      data = self.class.post("/register", { body: options })
+    def register(params)
+      data = self.class.post("/register", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
@@ -101,8 +108,8 @@ module Yify
     # Login a Yify user.
     #
     # @returns Yify::Models::Session
-    def login(options)
-      data = self.class.post("/login", { body: options })
+    def login(params)
+      data = self.class.post("/login", { body: params })
       Yify::Response.new(data, :session)
     end
 
@@ -121,8 +128,8 @@ module Yify
     # See: https://yts.to/api#resetPasswordDocs
     #
     # Reset the users' password.
-    def reset_password(options)
-      data = self.class.post("/resetpassconfirm", { body: options })
+    def reset_password(params)
+      data = self.class.post("/resetpassconfirm", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
@@ -143,8 +150,8 @@ module Yify
     # update a logged in users' profile.
     #
     # @returns Yify::Models::ApiResponse
-    def update_profile(options)
-      data = self.class.post("/editprofile", { body: options })
+    def update_profile(params)
+      data = self.class.post("/editprofile", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
@@ -154,8 +161,8 @@ module Yify
     # Get a list of all requested movies.
     #
     # @returns [Yify::Models::RequestedMovie]
-    def requests(options)
-      data = self.class.get("/requests", { query: options })
+    def requests(params)
+      data = self.class.get("/requests", { query: params })
       Yify::Response.new(data, :request_list)
     end
 
@@ -165,8 +172,8 @@ module Yify
     # Request a movie to be added to Yify.
     #
     # @returns Yify::Models::ApiResponse
-    def make_request(options)
-      data = self.class.post("/makerequest", { body: options })
+    def make_request(params)
+      data = self.class.post("/makerequest", { body: params })
       Yify::Response.new(data, :api_response)
     end
 
@@ -176,8 +183,8 @@ module Yify
     # Vote for a requested movie.
     #
     # @returns Yify::Models::ApiResponse
-    def vote(options)
-      data = self.class.post("/vote", { body: options })
+    def vote(params)
+      data = self.class.post("/vote", { body: params })
       Yify::Response.new(data, :api_response)
     end
   end

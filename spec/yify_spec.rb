@@ -7,29 +7,23 @@ describe Yify::Client do
   end
 
   it "should have a base_uri configured" do
-    expect(subject.class.base_uri).to eq("http://yts.to/api")
+    expect(subject.class.base_uri).to eq("http://yts.to/api/v2")
   end
 
   it "should get upcoming movies", :vcr do
-    response = subject.upcoming
-    expect(response.result.first.movie_title).to eq("Persecuted (2014)")
+    response = subject.list_upcoming
+    expect(response.result.first.title).to eq("Double Impact")
   end
 
   it "should list movies", :vcr do
-    options = { limit: 1 }
-    response = subject.list(options)
+    response = subject.list_movies({ limit: 1 })
+    pp response
     expect(response.result.count).to eq(1)
   end
 
-  it "should list by imdb id", :vcr do
-    options = { imdb_id: ["tt0111161", "tt0068646"] }
-    response = subject.list_imdb(options)
-    expect(response.result.first.movie_title_clean).to eq("The Godfather")
-  end
-
   it "should get movie details", :vcr do
-    response = subject.movie(353)
-    expect(response.result.movie_title_clean).to eq("We Were Soldiers")
+    response = subject.movie_details({ movie_id: 353, with_images: true, with_cast: true })
+    expect(response.result.title).to eq("Confessions of a Dangerous Mind")
   end
 
   it "should get movie comments", :vcr do
@@ -72,7 +66,7 @@ describe Yify::Client do
 
   it "should edit a profile", :vcr do
     options = { hash: ENV["hash"], about: "RUBY FTW!" }
-    response = subject.update_profile(options) 
+    response = subject.update_profile(options)
     expect(response.result.status).to include("changes made successfully")
   end
 
@@ -99,5 +93,4 @@ describe Yify::Client do
     response = subject.vote(options)
     expect(response.result.status).to include("Vote submission successful")
   end
-
 end

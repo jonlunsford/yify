@@ -14,7 +14,13 @@ module Yify
             if value.is_a?(Hash)
               new_value = symbolize_keys(value)
             elsif value.is_a?(Array)
-              new_value = value.map{ |item| symbolize_keys(item) }
+              new_value = value.map do |item|
+                if item.is_a?(Hash)
+                  symbolize_keys(item)
+                else
+                  item
+                end
+              end
             else
               new_value = value
             end

@@ -1,54 +1,34 @@
 module Yify
   module Models
     class Movie < Base
-      attribute :age_rating, String
-      attribute :cast_list, String
-      attribute :cover_image, String
-      attribute :date_uploaded, DateTime
-      attribute :date_uploaded_epoch, DateTime
-      attribute :director_list, String
-      attribute :downloaded, Integer
-      attribute :frame_rate, Float
-      attribute :genre, String
-      attribute :genre1, String
-      attribute :genre2, String
+      attribute :id, Integer
+      attribute :url, String
       attribute :imdb_code, String
-      attribute :imdb_link, String
+      attribute :title, String
+      attribute :title_long, DateTime
+      attribute :slug, DateTime
+      attribute :year, String
+      attribute :rating, Integer
+      attribute :runtime, Integer
+      attribute :genres, Array
       attribute :language, String
-      attribute :large_cover, String
-      attribute :large_screenshot1, String
-      attribute :large_screenshot2, String
-      attribute :large_screenshot3, String
-      attribute :long_description, String
-      attribute :medium_cover, String
-      attribute :medium_screenshot1, String
-      attribute :medium_screenshot2, String
-      attribute :medium_screenshot3, String
-      attribute :movie_count, String
-      attribute :movie_id, Integer
-      attribute :movie_rating, Float
-      attribute :movie_runtime, Integer
-      attribute :movie_title, String
-      attribute :movie_title_clean, String
-      attribute :movie_url, String
-      attribute :movie_year, String
-      attribute :quality, String
-      attribute :resolution, String
-      attribute :short_description, String
-      attribute :size, String
-      attribute :size_byte, Integer
+      attribute :mpa_rating, String
+      attribute :download_count, Integer
+      attribute :like_count, Integer
+      attribute :rt_critics_score, Integer
+      attribute :rt_critics_rating, String
+      attribute :rt_audience_score, Integer
+      attribute :rt_audience_rating, String
+      attribute :description_intro, String
+      attribute :description_full, String
+      attribute :yt_trailer_code, String
+      attribute :date_uploaded, DateTime
+      attribute :date_uploaded_unix, DateTime
+      attribute :background_image, String
+      attribute :small_cover_image, String
+      attribute :medium_cover_image, String
       attribute :state, String
-      attribute :subtitles, String
-      attribute :torrent_hash, String
-      attribute :torrent_magnet_url, String
-      attribute :torrent_peers, String
-      attribute :torrent_seeds, String
-      attribute :torrent_url, String
-      attribute :uploader, String
-      attribute :uploader_uid, Integer
-      attribute :uploader_notes, String
-      attribute :youtube_trailer_id, String
-      attribute :youtube_trailer_url, String
+      attribute :torrents, Array
     end
   end
 end

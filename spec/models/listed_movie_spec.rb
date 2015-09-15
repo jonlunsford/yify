@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Yify::Models::Movie do
+describe Yify::Models::ListedMovie do
   it { should respond_to(:id) }
   it { should respond_to(:url) }
   it { should respond_to(:imdb_code) }
@@ -29,5 +29,5 @@ describe Yify::Models::Movie do
   it { should respond_to(:medium_cover_image) }
   it { should respond_to(:state) }
   it { should respond_to(:torrents) }
-end
 
+end

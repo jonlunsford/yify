@@ -1,6 +1,6 @@
 require "yify"
 require "vcr"
-require "pry"
+require "pry-byebug"
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/fixtures/vcr_cassettes"

@@ -2,44 +2,58 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/list?limit=1
+    uri: http://yts.to/api/v2/list_movies?limit=1
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - SK Server 9001
+      - nginx
       Date:
-      - Thu, 16 Oct 2014 13:01:51 GMT
+      - Mon, 14 Sep 2015 20:05:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
       Access-Control-Allow-Origin:
-      - '*'
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
       Age:
       - '0'
       X-Cache:
       - uncached
       Accept-Ranges:
       - bytes
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
+      X-Frontend:
+      - LU
     body:
       encoding: UTF-8
-      string: '{"MovieCount":5579,"MovieList":[{"MovieID":"6062","State":"OK","MovieUrl":"http:\/\/yts.to\/movie\/Persecuted_2014","MovieTitle":"Persecuted
-        (2014)","MovieTitleClean":"Persecuted","MovieYear":"2014","AgeRating":"PG-13","DateUploaded":"2014-10-16
-        13:43:47","DateUploadedEpoch":1413420227,"Quality":"720p","CoverImage":"http:\/\/static.yts.to\/attachments\/Persecuted_2014\/poster_med.jpg","ImdbCode":"tt1761005","ImdbLink":"http:\/\/www.imdb.com\/title\/tt1761005\/","Size":"748.23
-        MB","SizeByte":"784579457","MovieRating":"3.9","Genre":"Action","Uploader":"OTTO","UploaderUID":"310615","Downloaded":"3234","TorrentSeeds":"766","TorrentPeers":"955","TorrentUrl":"http:\/\/yts.to\/download\/start\/F3E50819CDA7C0FF953F1B6742BC11247FFD88AC.torrent","TorrentHash":"f3e50819cda7c0ff953f1b6742bc11247ffd88ac","TorrentMagnetUrl":"magnet:?xt=urn:btih:f3e50819cda7c0ff953f1b6742bc11247ffd88ac&dn=Persecuted&tr=http:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.openbittorrent.com:80\/announce&tr=udp:\/\/open.demonii.com:1337\/announce&tr=udp:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.yify-torrents.com\/announce"}]}'
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":4432,"limit":1,"page_number":1,"movies":[{"id":4464,"url":"http:\/\/yts.to\/movie\/at-close-range-1986","imdb_code":"tt0090670","title":"At
+        Close Range","title_long":"At Close Range (1986)","slug":"at-close-range-1986","year":1986,"rating":7,"runtime":111,"genres":["Crime","Drama"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/4955C5BF6735055873A2F67269E136A3003C4288.torrent","hash":"4955C5BF6735055873A2F67269E136A3003C4288","quality":"720p","seeds":372,"peers":543,"size":"817.84
+        MB","size_bytes":857562972,"date_uploaded":"2015-09-15 01:08:56","date_uploaded_unix":1442236136},{"url":"http:\/\/yts.to\/torrent\/download\/F233F919F1EC6CABD44A99E0ED69F8CC7C63A8B8.torrent","hash":"F233F919F1EC6CABD44A99E0ED69F8CC7C63A8B8","quality":"1080p","seeds":0,"peers":0,"size":"1.85
+        GB","size_bytes":1983613945,"date_uploaded":"2015-09-15 05:56:52","date_uploaded_unix":1442253412}],"date_uploaded":"2015-09-15
+        01:08:53","date_uploaded_unix":1442236133}]},"@meta":{"server_time":1442260886,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"1002.79
+        ms"}}'
     http_version: 
-  recorded_at: Thu, 16 Oct 2014 05:25:02 GMT
+  recorded_at: Mon, 14 Sep 2015 20:01:27 GMT
 recorded_with: VCR 2.9.3

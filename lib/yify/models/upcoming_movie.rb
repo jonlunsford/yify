@@ -1,15 +1,12 @@
 module Yify
   module Models
     class UpcomingMovie < Base
-      attribute :movie_title, String
-      attribute :movie_cover, String
+      attribute :title, String
+      attribute :year, String
       attribute :imdb_code, String
-      attribute :imdb_link, String
-      attribute :uploader, String
-      attribute :uploader_uid, Integer
+      attribute :medium_cover_image, String
       attribute :date_added, DateTime
-      attribute :date_added_epoch, DateTime
-      attribute :username, String
+      attribute :date_added_unix, DateTime
     end
   end
 end

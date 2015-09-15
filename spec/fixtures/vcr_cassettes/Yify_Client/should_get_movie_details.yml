@@ -2,59 +2,72 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/movie?id=353
+    uri: http://yts.to/api/v2/movie_details?movie_id=353&with_cast=true&with_images=true
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - HU Server 9001
+      - nginx
       Date:
-      - Thu, 16 Oct 2014 05:52:15 GMT
+      - Mon, 14 Sep 2015 23:00:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
       Access-Control-Allow-Origin:
-      - '*'
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
       Age:
       - '0'
       X-Cache:
       - uncached
       Accept-Ranges:
       - bytes
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
+      X-Frontend:
+      - CA
     body:
       encoding: UTF-8
-      string: '{"MovieID":"353","MovieUrl":"http:\/\/yts.to\/movie\/We_Were_Soldiers_2002","DateUploaded":"2011-08-31
-        01:04:02","DateUploadedEpoch":1314709442,"Uploader":"YIFY","UploaderUID":"16","UploaderNotes":null,"Quality":"720p","Resolution":"1280*544","FrameRate":"23.976","Language":"English","Subtitles":"English","LargeCover":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/wearesoldiers_large.jpg","MediumCover":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/wearesoldiers_med.jpg","LargeScreenshot1":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbaaadn_large.jpg","LargeScreenshot2":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbcaadn_large.jpg","LargeScreenshot3":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbdaadn_large.jpg","MediumScreenshot1":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbaaadn_med.jpg","MediumScreenshot2":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbcaadn_med.jpg","MediumScreenshot3":"http:\/\/static.yts.to\/attachments\/we_were_soldiers_(2002)\/lajbdaadn_med.jpg","ImdbCode":"tt0277434","ImdbLink":"http:\/\/www.imdb.com\/title\/tt0277434\/","MovieTitle":"We
-        Were Soldiers (2002)","MovieTitleClean":"We Were Soldiers","MovieYear":"2002","MovieRating":"7.0","MovieRuntime":"138","YoutubeTrailerID":"h0yUlbAt8Kk","YoutubeTrailerUrl":"http:\/\/www.youtube.com\/watch?v=h0yUlbAt8Kk","AgeRating":"R","Genre1":"Action","Genre2":"Drama","ShortDescription":"
-        The story of the first major battle of the American phase of the Vietnam War
-        and the soldiers on both sides that fought it.","LongDescription":"In a place
-        soon to be known as The Valley of Death, in a football field-sized clearing
-        called landing zone X-Ray, Lt. Colonel Hal Moore and 400 young troopers from
-        the elite newly formed American 7th \"Air\" Cavalry, were surrounded by 2,000
-        North Vietnamese soldiers dug into the tunnel warren mountainside. The ensuing
-        battle was one of the most savage in U.S. history and is portrayed here as
-        the signal encounter between the American and North Vietnamese armies. We
-        Were Soldiers Once... And Young is a tribute to the nobility of those men
-        under fire, their common acts of uncommon valor, and their loyalty to and
-        love for one another.","CastList":[{"ActorName":"Mel Gibson","CharacterName":"Lt.
-        Col. Hal Moore","ActorImdbCode":"nm0000154","ActorImdbLink":"http:\/\/www.imdb.com\/name\/nm0000154\/"},{"ActorName":"Madeleine
-        Stowe","CharacterName":"Julie Moore","ActorImdbCode":"nm0000656","ActorImdbLink":"http:\/\/www.imdb.com\/name\/nm0000656\/"},{"ActorName":"Sam
-        Elliott","CharacterName":"Sgt. Maj. Basil Plumley","ActorImdbCode":"nm0000385","ActorImdbLink":"http:\/\/www.imdb.com\/name\/nm0000385\/"}],"DirectorList":[{"DirectorName":"Randall
-        Wallace","DirectorImdbCode":"nm0908824","DirectorImdbLink":"http:\/\/www.imdb.com\/name\/nm0908824\/"}],"Downloaded":"65293","TorrentUrl":"http:\/\/yts.to\/download\/start\/95DCB8759C3FF0234A81E595EB4E5347062C4961.torrent","TorrentHash":"95dcb8759c3ff0234a81e595eb4e5347062c4961","TorrentMagnetUrl":"magnet:?xt=urn:btih:95dcb8759c3ff0234a81e595eb4e5347062c4961&dn=We+Were+Soldiers&tr=http:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.openbittorrent.com:80\/announce&tr=udp:\/\/open.demonii.com:1337\/announce&tr=udp:\/\/exodus.desync.com:6969\/announce&tr=udp:\/\/tracker.yify-torrents.com\/announce","TorrentSeeds":"135","TorrentPeers":"13","Size":"750.12
-        MB","SizeByte":"786557829"}'
+      string: '{"status":"ok","status_message":"Query was successful","data":{"id":353,"url":"http:\/\/yts.to\/movie\/confessions-of-a-dangerous-mind-2002","imdb_code":"tt0270288","title":"Confessions
+        of a Dangerous Mind","title_long":"Confessions of a Dangerous Mind (2002)","slug":"confessions-of-a-dangerous-mind-2002","year":2002,"rating":7.1,"runtime":113,"genres":["Biography","Comedy"],"language":"English","mpa_rating":"R","download_count":64416,"like_count":105,"rt_critics_score":79,"rt_critics_rating":"Certified
+        Fresh","rt_audience_score":75,"rt_audience_rating":"Upright","description_intro":"An
+        adaptation of the cult memoir of game show impresario Chuck Barris, in which
+        he purports to have been a CIA hitman.","description_full":"Television made
+        him famous, but his biggest hits happened off screen. \u0022Confessions of
+        a Dangerous Mind\u0022 is the story of a legendary showman\u0027s double life
+        - television producer by day, CIA assassin by night. At the height of his
+        TV career, Chuck Barris was recruited by the CIA and trained to become a covert
+        operative. Or so Barris said.","yt_trailer_code":"tlZsSLe35z4","date_uploaded":"2011-11-02
+        11:56:20","date_uploaded_unix":1320188180,"images":{"background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-cover.jpg","large_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-cover.jpg","medium_screenshot_image1":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot1.jpg","medium_screenshot_image2":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot2.jpg","medium_screenshot_image3":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot3.jpg","large_screenshot_image1":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot1.jpg","large_screenshot_image2":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot2.jpg","large_screenshot_image3":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot3.jpg"},"torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/32995A7FE823D6668BFC37A5853BF7EB798E0974.torrent","hash":"32995A7FE823D6668BFC37A5853BF7EB798E0974","quality":"720p","resolution":"1280*536","framerate":23.976,"seeds":44,"peers":8,"size":"701.42
+        MB","size_bytes":735492178,"download_count":50856,"date_uploaded":"2011-11-02
+        11:56:20","date_uploaded_unix":1320188180},{"url":"http:\/\/yts.to\/torrent\/download\/5F803C0D541CBAA57CDFAA330CC28B5377A6D946.torrent","hash":"5F803C0D541CBAA57CDFAA330CC28B5377A6D946","quality":"1080p","resolution":"1916*800","framerate":23.976,"seeds":60,"peers":13,"size":"1.65
+        GB","size_bytes":1767811234,"download_count":42901,"date_uploaded":"2015-01-02
+        19:34:48","date_uploaded_unix":1420180488}],"directors":[{"name":"George Clooney","small_image":"http:\/\/s.ynet.io\/assets\/images\/directors\/thumb\/nm0000123.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/directors\/nm0000123.jpg","imdb_code":"nm0000123"}],"actors":[{"name":"Sam
+        Rockwell","character_name":"Chuck Barris","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0005377.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0005377.jpg","imdb_code":"nm0005377"},{"name":"Drew
+        Barrymore","character_name":"Penny","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000106.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000106.jpg","imdb_code":"nm0000106"},{"name":"George
+        Clooney","character_name":"Jim Byrd","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000123.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000123.jpg","imdb_code":"nm0000123"},{"name":"Julia
+        Roberts","character_name":"Patricia Watson","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000210.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000210.jpg","imdb_code":"nm0000210"}]},"@meta":{"server_time":1442271611,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"9.51
+        ms"}}'
     http_version: 
-  recorded_at: Thu, 16 Oct 2014 05:52:16 GMT
+  recorded_at: Mon, 14 Sep 2015 23:00:12 GMT
 recorded_with: VCR 2.9.3
