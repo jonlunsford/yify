@@ -1,6 +1,6 @@
 module Yify
   module Models
-    class Director < PersonBase
+    class Director < Base
     end
   end
 end

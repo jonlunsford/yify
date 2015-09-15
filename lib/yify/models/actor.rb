@@ -1,7 +1,6 @@
 module Yify
   module Models
-    class Actor < PersonBase
-      attribute :character_name, String
+    class Actor < Base
     end
   end
 end
