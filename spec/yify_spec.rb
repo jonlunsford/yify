@@ -10,14 +10,9 @@ describe Yify::Client do
     expect(subject.class.base_uri).to eq("http://yts.to/api/v2")
   end
 
-  it "should get upcoming movies", :vcr do
-    response = subject.list_upcoming
-    expect(response.result.first.title).to eq("Double Impact")
-  end
-
   it "should list movies", :vcr do
-    response = subject.list_movies({ limit: 1 })
-    expect(response.result.count).to eq(1)
+    response = subject.list_movies({ limit: 3 })
+    expect(response.result.count).to eq(3)
   end
 
   it "should get movie details", :vcr do
@@ -25,9 +20,29 @@ describe Yify::Client do
     expect(response.result.title).to eq("Confessions of a Dangerous Mind")
   end
 
+  it "should get movie suggestions", :vcr do
+    response = subject.movie_suggestions(353)
+    expect(response.result.first.title).to eq("The Insider")
+  end
+
   it "should get movie comments", :vcr do
     response = subject.movie_comments(353)
     expect(response.result.first.comment_text).to eq("thank you")
+  end
+
+  it "should get movie reviews", :vcr do
+    response = subject.movie_reviews(353)
+    expect(response.result.first.user_rating).to eq(5)
+  end
+
+  it "should get movie parental guides", :vcr do
+    response = subject.movie_parental_guides(353)
+    expect(response.result.first.type).to eq("Nudity")
+  end
+
+  it "should get upcoming movies", :vcr do
+    response = subject.list_upcoming
+    expect(response.result.first.title).to eq("Double Impact")
   end
 
   it "should get user details", :vcr do
@@ -35,7 +50,7 @@ describe Yify::Client do
     expect(response.result.username).to eq("YIFY")
   end
 
-  # TODO
+  # TODO POST requests, waiting on application_key from YTS
   it "should register a user", :vcr do
     options = { username: ENV["username"], password: ENV["password"], email: ENV["email"] }
     response = subject.register(options)

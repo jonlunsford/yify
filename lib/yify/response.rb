@@ -45,18 +45,5 @@ module Yify
       end
     end
 
-    def map_class(model)
-      case model
-      when :movies
-        "movie"
-      when :request_list
-        "requested_movie"
-      when :upcomming_movies
-        "upcomming_movie"
-      else
-        model
-      end
-    end
-
   end
 end

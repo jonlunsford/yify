@@ -31,6 +31,23 @@ module Yify
         end
       end
 
+      def map_class(name)
+        case name
+        when :recently_downloaded
+          :movie
+        when :movies
+          :movie
+        when :request_list
+          :movie
+        when :upcomming_movies
+          :movie
+        when :movie_suggestions
+          :movie
+        else
+          name
+        end
+      end
+
     end
   end
 end
