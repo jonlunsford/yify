@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yts.to/api/v2/movie_parental_guides?movie_id=353
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 15 Sep 2015 20:56:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4282'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Age:
+      - '0'
+      X-Cache:
+      - uncached
+      Accept-Ranges:
+      - bytes
+      X-Frontend:
+      - DE
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","status_message":"Query was successful","data":{"parental_guide_count":4,"parental_guides":[{"type":"Nudity","parental_guide_text":"SEX\/NUDITY
+        7\/10\n\nA man and a woman have sex: the woman is on top of the man thrusting
+        (we see her bare back) and the man moans.\n\nA man and a woman have sex: the
+        man thrusts on top of the woman and we only see their bare backs.\n\nA man
+        and a woman have sex in a shower: we see rhythmic movement (no nudity).\n\nA
+        woman climbs onto a man\u0027s lap and kisses him, we see a theater filled
+        with couples kissing, a man and a woman kiss romantically a few times, a man
+        crawls across a table to kiss a woman and she licks his face, we see the silhouette
+        of a man and a woman kissing, and we see quick clips of a man kissing two
+        different women in many different settings.\n\nA man and a woman kiss while
+        lying on a sofa (her leg is wrapped around his waist), we hear panting and
+        moaning, and another woman walks in on them.\n\nWe see a fully nude man from
+        the back several times in several scenes.\n\nA man opens his pants zipper
+        and presumably removes his penis (we don\u0027t see anything) making a sexual
+        suggestion to the woman.\n\nA woman invites a man to have sex with her, a
+        young boy asks a young girl to lick his private parts, and a man makes sexual
+        sounds.\n\nPeople talk on the radio about having anal sex.\n\nA man slathers
+        something (we presume it\u0027s microfilm) with Vaseline and then reaches
+        behind him and grunts (we assume he\u0027s inserting the microfilm in his
+        anus).\n\nA man talks about his mother having raised him as a girl (we see
+        him dressed in dresses."},{"type":"Violence","parental_guide_text":"VIOLENCE\/GORE
+        5\/10\n\nA man is dragged into the back of a car and strangled (his legs flail
+        around until he dies). \n\nA man shoots two men then drags another man out
+        of a car and shoots him (there is blood all over him). \n\nA man is shot a
+        few times and we see bloody holes in his clothing. \n\nTwo men hold guns on
+        a man, then we see the man dead on the ground with blood on his head and sleeve.
+        \n\nA man sits on a diving board over a swimming pool and the water below
+        him fills with blood. \n\nA man shoots a man and leaves him dead on the ground,
+        and a woman is shot in the back. \n\nA man gags and falls on the floor unable
+        to move, and a woman gags and falls to the floor gasping and trembling. There
+        are quick clips of a man killing several people in several scenes. \n\nWe
+        see that a man is imagining a studio filled with people dead and covered with
+        blood. \n\nA man is hit in the head with a gun (we see him later with a bandaged
+        nose and black eyes), a woman punches a man in the face, and a man is punched
+        in the nose. \n\nA man holds a gun to a man\u0027s head. \n\nA man is thrown
+        out of a bar by the bouncer and lands hard on the sidewalk. \n\nA man receives
+        instructions and training on how to kill a man: one example shows a man being
+        hit in the throat and he goes down gasping for air (presumably, he dies from
+        his injuries although we don\u0027t see his demise) and another shows people
+        preparing nitroglycerine. \n\nBattery cables are attached to the genitals
+        of a dummy, they are switched on and the dummy smolders. \n\nA man has a scarred
+        face. \n\nA woman talks about her father having been a serial killer. \n\nWe
+        hear that a baby was born with a twin\u0027s umbilical cord wrapped around
+        its neck. \n\nA man talks about enjoying the act of killing, people talk about
+        a man having committed suicide, people talk about a man blowing his brains
+        out. A man yells at and threatens a group of young men and women. \n\nWe see
+        a dead man in a morgue with a toe tag. \n\nWe hear a man vomiting."},{"type":"Profanity","parental_guide_text":"PROFANITY
+        10\/10\n\n54 F-words, 13 sexual references, 1 explicit hand gesture, 12 scatological
+        terms, 14 anatomical terms (including two uses of \u0022p***y\u0022), 7 mild
+        obscenities, 1 derogatory term for African-Americans, 1 derogatory term for
+        homosexuals, 1 religious profanity, 9 religious exclamations."},{"type":"Alcohol","parental_guide_text":"Incidental
+        smoking and drinking. References to marijuana and alcoholism."}]},"@meta":{"server_time":1442350571,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"1.37
+        ms"}}'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 20:56:11 GMT
+recorded_with: VCR 2.9.3

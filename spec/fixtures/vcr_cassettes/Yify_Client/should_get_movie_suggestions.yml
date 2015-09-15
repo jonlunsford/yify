@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://yts.to/api/v2/movie_suggestions?movie_id=353
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 15 Sep 2015 17:55:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4384'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Age:
+      - '0'
+      X-Cache:
+      - uncached
+      Accept-Ranges:
+      - bytes
+      X-Frontend:
+      - CA
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_suggestions_count":4,"movie_suggestions":[{"id":18,"url":"http:\/\/yts.to\/movie\/the-insider-1999","imdb_code":"tt0140352","title":"The
+        Insider","title_long":"The Insider (1999)","slug":"the-insider-1999","year":1999,"rating":7.9,"runtime":157,"genres":["Biography","Drama"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Insider_1999\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Insider_1999\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/B5D813ED4D8BAE8E8EE49A30C2C5616506408016.torrent","hash":"B5D813ED4D8BAE8E8EE49A30C2C5616506408016","quality":"720p","seeds":119,"peers":10,"size":"649.25
+        MB","size_bytes":680787968,"date_uploaded":"2011-08-05 02:00:30","date_uploaded_unix":1312466430}],"date_uploaded":"2011-08-05
+        02:00:30","date_uploaded_unix":1312466430},{"id":190,"url":"http:\/\/yts.to\/movie\/remember-the-titans-2000","imdb_code":"tt0210945","title":"Remember
+        the Titans","title_long":"Remember the Titans (2000)","slug":"remember-the-titans-2000","year":2000,"rating":7.8,"runtime":120,"genres":["Biography","Drama"],"language":"English","mpa_rating":"PG","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Remember_the_Titans_2000\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Remember_the_Titans_2000\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/BD44A37107F1203316F979D696BDB781A6F464A4.torrent","hash":"BD44A37107F1203316F979D696BDB781A6F464A4","quality":"720p","seeds":128,"peers":19,"size":"599.40
+        MB","size_bytes":628516454,"date_uploaded":"2011-09-10 02:43:10","date_uploaded_unix":1315579390}],"date_uploaded":"2011-09-10
+        02:43:10","date_uploaded_unix":1315579390},{"id":159,"url":"http:\/\/yts.to\/movie\/the-pianist-2002","imdb_code":"tt0253474","title":"The
+        Pianist","title_long":"The Pianist (2002)","slug":"the-pianist-2002","year":2002,"rating":8.5,"runtime":150,"genres":["Biography","Drama"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Pianist_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Pianist_2002\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/5B35B2C94B288DD9F8970A38410975467BF662EE.torrent","hash":"5B35B2C94B288DD9F8970A38410975467BF662EE","quality":"720p","seeds":270,"peers":49,"size":"899.22
+        MB","size_bytes":942900511,"date_uploaded":"2011-09-03 19:37:22","date_uploaded_unix":1315035442},{"url":"http:\/\/yts.to\/torrent\/download\/3B66ADB093195AE1BC5A832352F9E41DD77CF980.torrent","hash":"3B66ADB093195AE1BC5A832352F9E41DD77CF980","quality":"1080p","seeds":251,"peers":48,"size":"2.00
+        GB","size_bytes":2147483648,"date_uploaded":"2012-10-31 18:41:56","date_uploaded_unix":1351662116}],"date_uploaded":"2011-09-03
+        19:37:22","date_uploaded_unix":1315035442},{"id":1125,"url":"http:\/\/yts.to\/movie\/a-beautiful-mind-2001","imdb_code":"tt0268978","title":"A
+        Beautiful Mind","title_long":"A Beautiful Mind (2001)","slug":"a-beautiful-mind-2001","year":2001,"rating":8.2,"runtime":135,"genres":["Biography","Drama"],"language":"English","mpa_rating":"PG-13","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/A_Beautiful_Mind_2001\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/A_Beautiful_Mind_2001\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/831FD96B0363AB0038EC9427BC17C5911117C8E2.torrent","hash":"831FD96B0363AB0038EC9427BC17C5911117C8E2","quality":"720p","seeds":469,"peers":73,"size":"801.43
+        MB","size_bytes":840360264,"date_uploaded":"2012-09-02 01:15:24","date_uploaded_unix":1346505324},{"url":"http:\/\/yts.to\/torrent\/download\/9CA50DA836B52A6BCB06AAA91BB2478FD96F5DD0.torrent","hash":"9CA50DA836B52A6BCB06AAA91BB2478FD96F5DD0","quality":"1080p","seeds":245,"peers":42,"size":"1.04
+        GB","size_bytes":1116691497,"date_uploaded":"2012-09-02 01:21:18","date_uploaded_unix":1346505678}],"date_uploaded":"2012-09-02
+        01:15:24","date_uploaded_unix":1346505324}]},"@meta":{"server_time":1442339700,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"56.27
+        ms"}}'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 17:55:00 GMT
+recorded_with: VCR 2.9.3

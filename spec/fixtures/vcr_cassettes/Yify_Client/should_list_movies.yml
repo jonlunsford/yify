@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/v2/list_movies?limit=1
+    uri: http://yts.to/api/v2/list_movies?limit=3
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 14 Sep 2015 20:05:10 GMT
+      - Tue, 15 Sep 2015 20:35:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -45,15 +45,23 @@ http_interactions:
       Accept-Ranges:
       - bytes
       X-Frontend:
-      - LU
+      - NL
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":4432,"limit":1,"page_number":1,"movies":[{"id":4464,"url":"http:\/\/yts.to\/movie\/at-close-range-1986","imdb_code":"tt0090670","title":"At
-        Close Range","title_long":"At Close Range (1986)","slug":"at-close-range-1986","year":1986,"rating":7,"runtime":111,"genres":["Crime","Drama"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/at_close_range_1986\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/4955C5BF6735055873A2F67269E136A3003C4288.torrent","hash":"4955C5BF6735055873A2F67269E136A3003C4288","quality":"720p","seeds":372,"peers":543,"size":"817.84
-        MB","size_bytes":857562972,"date_uploaded":"2015-09-15 01:08:56","date_uploaded_unix":1442236136},{"url":"http:\/\/yts.to\/torrent\/download\/F233F919F1EC6CABD44A99E0ED69F8CC7C63A8B8.torrent","hash":"F233F919F1EC6CABD44A99E0ED69F8CC7C63A8B8","quality":"1080p","seeds":0,"peers":0,"size":"1.85
-        GB","size_bytes":1983613945,"date_uploaded":"2015-09-15 05:56:52","date_uploaded_unix":1442253412}],"date_uploaded":"2015-09-15
-        01:08:53","date_uploaded_unix":1442236133}]},"@meta":{"server_time":1442260886,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"1002.79
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":4435,"limit":3,"page_number":1,"movies":[{"id":4467,"url":"http:\/\/yts.to\/movie\/spy-2015","imdb_code":"tt3079380","title":"Spy","title_long":"Spy
+        (2015)","slug":"spy-2015","year":2015,"rating":7.3,"runtime":119,"genres":["Action","Comedy"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/DDF65502DD6719CFFFCD2461F348A6DC95F9D85E.torrent","hash":"DDF65502DD6719CFFFCD2461F348A6DC95F9D85E","quality":"720p","seeds":5801,"peers":10331,"size":"875.07
+        MB","size_bytes":917582481,"date_uploaded":"2015-09-15 16:24:28","date_uploaded_unix":1442291068},{"url":"http:\/\/yts.to\/torrent\/download\/93748BEF633891AED8A63868746B4ADFDF2C999C.torrent","hash":"93748BEF633891AED8A63868746B4ADFDF2C999C","quality":"1080p","seeds":4644,"peers":9106,"size":"1.95
+        GB","size_bytes":2094281399,"date_uploaded":"2015-09-15 20:02:17","date_uploaded_unix":1442304137}],"date_uploaded":"2015-09-15
+        16:24:15","date_uploaded_unix":1442291055},{"id":4466,"url":"http:\/\/yts.to\/movie\/a-room-with-a-view-1985","imdb_code":"tt0091867","title":"A
+        Room with a View","title_long":"A Room with a View (1985)","slug":"a-room-with-a-view-1985","year":1985,"rating":7.4,"runtime":117,"genres":["Drama","Romance"],"language":"English","mpa_rating":"Unrated","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/63E08C7557E4EC8592509D1430D105ACED71C4DF.torrent","hash":"63E08C7557E4EC8592509D1430D105ACED71C4DF","quality":"720p","seeds":319,"peers":324,"size":"864.41
+        MB","size_bytes":906401713,"date_uploaded":"2015-09-15 14:09:20","date_uploaded_unix":1442282960},{"url":"http:\/\/yts.to\/torrent\/download\/593AF7162DF24C59590F5774E55ED962FCF5171F.torrent","hash":"593AF7162DF24C59590F5774E55ED962FCF5171F","quality":"1080p","seeds":420,"peers":456,"size":"1.84
+        GB","size_bytes":1975226196,"date_uploaded":"2015-09-15 14:53:27","date_uploaded_unix":1442285607}],"date_uploaded":"2015-09-15
+        14:09:13","date_uploaded_unix":1442282953},{"id":4465,"url":"http:\/\/yts.to\/movie\/chain-of-command-2015","imdb_code":"tt4340720","title":"Chain
+        of Command","title_long":"Chain of Command (2015)","slug":"chain-of-command-2015","year":2015,"rating":3.9,"runtime":88,"genres":["Action","Thriller"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/1F5E525874F39CEC1F0175B5AF04A817655DB8C2.torrent","hash":"1F5E525874F39CEC1F0175B5AF04A817655DB8C2","quality":"720p","seeds":1251,"peers":1306,"size":"701.06
+        MB","size_bytes":735114062,"date_uploaded":"2015-09-15 10:06:28","date_uploaded_unix":1442268388},{"url":"http:\/\/yts.to\/torrent\/download\/0178D5967B27B75EE3BA4E05EC3EE79CB4623073.torrent","hash":"0178D5967B27B75EE3BA4E05EC3EE79CB4623073","quality":"1080p","seeds":1144,"peers":1058,"size":"1.24
+        GB","size_bytes":1333252215,"date_uploaded":"2015-09-15 11:20:18","date_uploaded_unix":1442272818}],"date_uploaded":"2015-09-15
+        10:06:21","date_uploaded_unix":1442268381}]},"@meta":{"server_time":1442349352,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"11.89
         ms"}}'
     http_version: 
-  recorded_at: Mon, 14 Sep 2015 20:01:27 GMT
+  recorded_at: Tue, 15 Sep 2015 20:35:53 GMT
 recorded_with: VCR 2.9.3
