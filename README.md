@@ -32,7 +32,7 @@ This gem translates the raw JSON coming back from Yify into full fledged Ruby ob
 	movie = client.movie_details(353).result
 	=> #<Yify::Models::Movie:0x007f9b14360130>
 
-	movie.movie_title
+	movie.title
 	=> "We Were Soldiers (2002)"
 
 A `Yify::Response` will always return an untouched hash as well, like this:
