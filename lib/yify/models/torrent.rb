@@ -1,6 +1,6 @@
 module Yify
   module Models
-    class Session < Base
+    class Torrent < Base
     end
   end
 end

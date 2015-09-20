@@ -1,6 +1,6 @@
 module Yify
   module Models
-    class Session < Base
+    class Review < Base
     end
   end
 end

@@ -2,47 +2,66 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/user?id=16
+    uri: http://yts.to/api/v2/user_details?user_id=16&with_recently_downloaded=true
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - HU Server 9001
+      - nginx
       Date:
-      - Sun, 19 Oct 2014 21:52:03 GMT
+      - Tue, 15 Sep 2015 04:50:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
       Access-Control-Allow-Origin:
       - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
       Age:
       - '0'
       X-Cache:
       - uncached
       Accept-Ranges:
       - bytes
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
+      X-Frontend:
+      - CA
     body:
       encoding: UTF-8
-      string: '{"UserID":"16","UserName":"YIFY","JoinDated":"2011-06-24 00:22:25","JoinDatedEpoch":1308831745,"LastSeenDate":"2014-10-19
-        23:39:22","LastSeenDateEpoch":1413715162,"TorrentsDownloadedCount":66,"MoviesRequestedCount":2,"CommentCount":300,"ChatTimeSeconds":"1444664","Avatar":"http:\/\/static.yts.to\/avatar\/161392094101.png","About":"Hey,
-        I am YIFY.\r<br \/>\r<br \/>Been involved in the torrenting community for
-        about 3 years now.\r<br \/>\r<br \/>All credit has to go to our team here,
-        and the rest of our users, making this community what it is today.\r<br \/>\r<br
-        \/>for more information about us, please check out this about page:\r<br \/>\r<br
-        \/>http:\/\/yify-torrents.com\/about","UserRole":"Admin"}'
+      string: '{"status":"ok","status_message":"Query was successful","data":{"id":16,"username":"YIFY","group":"administrator","url":"http:\/\/yts.to\/user\/yify","about_text":"Hey,
+        I am YIFY.\r\n\r\nBeen involved in the torrenting community for about 3 years
+        now.\r\n\r\nAll credit has to go to our team here, and the rest of our users,
+        making this community what it is today.\r\n\r\nfor more information about
+        us, please check out this about page:\r\n\r\nhttp:\/\/yify-torrents.com\/about","small_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/thumb\/161440070403.png","medium_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/161440070403.png","date_joined":"2011-06-24
+        00:22:25","date_joined_unix":1308831745,"recently_downloaded":[{"id":4075,"url":"http:\/\/yts.to\/movie\/ex-machina-2015","imdb_code":"tt0470752","title":"Ex
+        Machina","title_long":"Ex Machina (2015)","slug":"ex-machina-2015","year":2015,"rating":7.7,"runtime":108,"genres":["Drama","Mystery"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/ex_machina_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/ex_machina_2015\/medium-cover.jpg"},{"id":4094,"url":"http:\/\/yts.to\/movie\/kingsman-the-secret-service-2014","imdb_code":"tt2802144","title":"Kingsman:
+        The Secret Service","title_long":"Kingsman: The Secret Service (2014)","slug":"kingsman-the-secret-service-2014","year":2014,"rating":7.8,"runtime":129,"genres":["Action","Adventure"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/kingsman_the_secret_service_2014\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/kingsman_the_secret_service_2014\/medium-cover.jpg"},{"id":4361,"url":"http:\/\/yts.to\/movie\/the-age-of-adaline-2015","imdb_code":"tt1655441","title":"The
+        Age of Adaline","title_long":"The Age of Adaline (2015)","slug":"the-age-of-adaline-2015","year":2015,"rating":7.3,"runtime":112,"genres":["Drama","Romance"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/the_age_of_adaline_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/the_age_of_adaline_2015\/medium-cover.jpg"},{"id":4369,"url":"http:\/\/yts.to\/movie\/lila-eve-2015","imdb_code":"tt3442990","title":"Lila
+        \u0026 Eve","title_long":"Lila \u0026 Eve (2015)","slug":"lila-eve-2015","year":2015,"rating":5.8,"runtime":94,"genres":["Drama","Thriller"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/lila_eve_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/lila_eve_2015\/medium-cover.jpg"},{"id":4282,"url":"http:\/\/yts.to\/movie\/insurgent-2015","imdb_code":"tt2908446","title":"Insurgent","title_long":"Insurgent
+        (2015)","slug":"insurgent-2015","year":2015,"rating":6.4,"runtime":119,"genres":["Adventure","Sci-Fi"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/insurgent_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/insurgent_2015\/medium-cover.jpg"},{"id":4258,"url":"http:\/\/yts.to\/movie\/an-eye-for-an-eye-1981","imdb_code":"tt0082350","title":"An
+        Eye for an Eye","title_long":"An Eye for an Eye (1981)","slug":"an-eye-for-an-eye-1981","year":1981,"rating":5.4,"runtime":106,"genres":["Action","Adventure"],"small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/an_eye_for_an_eye_1981\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/an_eye_for_an_eye_1981\/medium-cover.jpg"}],"date_last_seen":"2015-09-15
+        06:54:24","date_last_seen_unix":1442256864},"@meta":{"server_time":1442292608,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"7.63
+        ms"}}'
     http_version: 
-  recorded_at: Sun, 19 Oct 2014 21:52:04 GMT
+  recorded_at: Tue, 15 Sep 2015 04:50:10 GMT
 recorded_with: VCR 2.9.3

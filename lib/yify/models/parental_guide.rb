@@ -1,6 +1,6 @@
 module Yify
   module Models
-    class Session < Base
+    class ParentalGuide < Base
     end
   end
 end

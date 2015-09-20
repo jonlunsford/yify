@@ -7,97 +7,137 @@ describe Yify::Client do
   end
 
   it "should have a base_uri configured" do
-    expect(subject.class.base_uri).to eq("http://yts.to/api")
-  end
-
-  it "should get upcoming movies", :vcr do
-    response = subject.upcoming
-    expect(response.result.first.movie_title).to eq("Persecuted (2014)")
+    expect(subject.class.base_uri).to eq("http://yts.to/api/v2")
   end
 
   it "should list movies", :vcr do
-    options = { limit: 1 }
-    response = subject.list(options)
-    expect(response.result.count).to eq(1)
-  end
-
-  it "should list by imdb id", :vcr do
-    options = { imdb_id: ["tt0111161", "tt0068646"] }
-    response = subject.list_imdb(options)
-    expect(response.result.first.movie_title_clean).to eq("The Godfather")
+    response = subject.list_movies({ limit: 3 })
+    expect(response.result.count).to eq(3)
   end
 
   it "should get movie details", :vcr do
-    response = subject.movie(353)
-    expect(response.result.movie_title_clean).to eq("We Were Soldiers")
+    response = subject.movie_details({ movie_id: 353, with_images: true, with_cast: true })
+    expect(response.result.title).to eq("Confessions of a Dangerous Mind")
+  end
+
+  it "should get movie suggestions", :vcr do
+    response = subject.movie_suggestions(353)
+    expect(response.result.first.title).to eq("The Insider")
   end
 
   it "should get movie comments", :vcr do
-    response = subject.comments(353)
-    expect(response.result.first.comment_text).to eq("thanxxxxxxx")
+    response = subject.movie_comments(353)
+    expect(response.result.first.comment_text).to eq("thank you")
+  end
+
+  it "should get movie reviews", :vcr do
+    response = subject.movie_reviews(353)
+    expect(response.result.first.user_rating).to eq(5)
+  end
+
+  it "should get movie parental guides", :vcr do
+    response = subject.movie_parental_guides(353)
+    expect(response.result.first.type).to eq("Nudity")
+  end
+
+  it "should get upcoming movies", :vcr do
+    response = subject.list_upcoming
+    expect(response.result.first.title).to eq("Double Impact")
   end
 
   it "should get user details", :vcr do
-    response = subject.user(16)
-    expect(response.result.user_name).to eq("YIFY")
+    response = subject.user_details({ user_id: 16, with_recently_downloaded: true })
+    expect(response.result.username).to eq("YIFY")
+  end
+
+  it "should get a user key", :vcr do
+    params = { application_key: ENV["application_key"], username: ENV["username"], password: ENV["password"] }
+    request = subject.user_get_key(params)
+    expect(request.response["status_message"]).to eq("User successfully logged in")
+  end
+
+  it "should get a user profile", :vcr do
+    response = subject.user_profile(ENV["user_key"])
+    expect(response.result.group).to eq("user")
+  end
+
+  it "should edit a user profile", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], about_text: "RUBY FTW!" }
+    response = subject.user_edit_settings(params)
+    expect(response.result.about_text).to eq("RUBY FTW!")
   end
 
   it "should register a user", :vcr do
-    options = { username: ENV["username"], password: ENV["password"], email: ENV["email"] }
-    response = subject.register(options)
-    expect(response.result.status).to include("An activation email has been sent")
+    params = { application_key: ENV["application_key"], username: ENV["username"], password: ENV["password"], email: ENV["email"] }
+    request = subject.user_register(params)
+    expect(request.response["status_message"]).to eq("User was successfully registered")
   end
 
-  it "should login a user", :vcr do
-    options = { username: ENV["username"], password: ENV["password"] }
-    response = subject.login(options)
-    expect(response.result.hash).to eq(ENV["hash"])
-  end
-
-  it "should recover passwords", :vcr do
-    response = subject.send_password_reset(ENV["email"])
-    expect(response.result.status).to include("password reset code has been sent")
+  it "should recover forgotten passwords", :vcr do
+    params = { application_key: ENV["application_key"], email: ENV["email"] }
+    request = subject.user_forgot_password(params)
+    expect(request.response["status_message"]).to eq("Reset password code has been sent")
   end
 
   it "should reset a password", :vcr do
-    options = { code: ENV["code"], newpassword: ENV["new_password"] }
-    response = subject.reset_password(options)
-    expect(response.result.status).to include("password has been changed")
+    params = { application_key: ENV["application_key"], reset_code: ENV["reset_code"], new_password: ENV["new_password"] }
+    request = subject.user_reset_password(params)
+    expect(request.response["status_message"]).to eq("User password was successfully changed")
   end
 
-  it "should get a profile", :vcr do
-    response = subject.profile(ENV["hash"])
-    expect(response.result.user_id).to eq(ENV["user_id"].to_i)
+  it "should like a movie", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.like_movie(params)
+    expect(request.response["status_message"]).to eq("Movie has been successfully liked")
   end
 
-  it "should edit a profile", :vcr do
-    options = { hash: ENV["hash"], about: "RUBY FTW!" }
-    response = subject.update_profile(options) 
-    expect(response.result.status).to include("changes made successfully")
+  it "should get movie bookmarks", :vcr do
+    params = { user_key: ENV["user_key"], movie_id: 353, with_rt_rattings: true }
+    response = subject.get_movie_bookmarks(params)
+    expect(response.result.movies.first.id).to eq(353)
   end
 
-  it "should post a comment", :vcr do
-    options = { hash: ENV["hash"], text: "RUBY FTW!", movieid: 353 }
-    response = subject.post_comment(options)
-    expect(response.result.status).to include("successfully posted comment")
+  it "should add a movie bookmark", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.add_movie_bookmark(params)
+    expect(request.response["status_message"]).to eq("Movie has been successfully bookmarked")
   end
 
-  it "should get requests list", :vcr do
-    options = { page: "confirmed", limit: 2 }
-    response = subject.requests(options)
-    expect(response.result.first.movie_title_clean).to eq("American Wedding")
+  it "should delete a movie bookmark", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.delete_movie_bookmark(params)
+    expect(request.response["status_message"]).to eq("Movie bookmarked has been removed")
   end
 
-  it "should add a request", :vcr do
-    options = { hash: ENV["hash"], request: "tt0111161" }
-    response = subject.make_request(options)
-    expect(response.result.error).to include("Movie has already been uploaded")
+  it "should make a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353, comment_text: "Hello World!" }
+    request = subject.make_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully submitted")
   end
 
-  it "should vote on requests", :vcr do
-    options = { hash: ENV["hash"], requestid: "1169" }
-    response = subject.vote(options)
-    expect(response.result.status).to include("Vote submission successful")
+  it "should like a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.like_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully liked")
+  end
+
+  it "should report a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.report_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully reported")
+  end
+
+  it "should delete a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.delete_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully deleted")
+  end
+
+  it "should make a request", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_title: "Hello World!", request_message: "Please ignore this request!" }
+    request = subject.make_request(params)
+    expect(request.response["status_message"]).to eq("Request has been successfully submitted")
   end
 
 end
+

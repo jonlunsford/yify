@@ -16,7 +16,7 @@ module Yify
 
     def normalized_response
       result = symbolize_keys(@response)
-      result = extract(result, @model)
+      result = extract(result[:data] || result, @model)
 
       @result.clear
       @result = hydrate_model(result)
@@ -42,17 +42,6 @@ module Yify
         end
       else
         value
-      end
-    end
-    
-    def map_class(model)
-      case model
-      when :movie_list
-        "movie"
-      when :request_list
-        "requested_movie"
-      else
-        model
       end
     end
 

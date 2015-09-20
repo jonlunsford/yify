@@ -2,41 +2,58 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/register
+    uri: http://yts.to/api/v2/user_register
     body:
       encoding: UTF-8
-      string: username=<USERNAME>&password=<PASSWORD>&email=<EMAIL>
-    headers: {}
+      string: application_key=<APPLICATION_KEY>&username=<USERNAME>&password=<PASSWORD>&email=<EMAIL>
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - UA Server 9001
+      - nginx
       Date:
-      - Sun, 19 Oct 2014 22:41:55 GMT
+      - Sun, 20 Sep 2015 02:15:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cache-Control:
+      - public, s-maxage=21600
       Access-Control-Allow-Origin:
       - "*"
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
       Age:
       - '0'
       X-Cache:
       - uncached
       Accept-Ranges:
       - bytes
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
+      X-Frontend:
+      - LU
     body:
       encoding: UTF-8
-      string: '{"status":"An activation email has been sent <EMAIL>"}'
-    http_version: 
-  recorded_at: Sun, 19 Oct 2014 22:41:55 GMT
+      string: '{"status":"ok","status_message":"User was successfully registered","data":{"username":"<USERNAME>","email":"<EMAIL>","user_key":"<USER_KEY>"},"@meta":{"server_time":1442715101,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"7.31
+        ms"}}'
+    http_version:
+  recorded_at: Sun, 20 Sep 2015 02:11:41 GMT
 recorded_with: VCR 2.9.3
