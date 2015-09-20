@@ -85,28 +85,59 @@ describe Yify::Client do
     expect(request.response["status_message"]).to eq("User password was successfully changed")
   end
 
-  it "should post a comment", :vcr do
-    params = { hash: ENV["hash"], text: "RUBY FTW!", movieid: 353 }
-    response = subject.post_comment(params)
-    expect(response.result.status).to include("successfully posted comment")
+  it "should like a movie", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.like_movie(params)
+    expect(request.response["status_message"]).to eq("Movie has been successfully liked")
   end
 
-  it "should get requests list", :vcr do
-    params = { page: "confirmed", limit: 2 }
-    response = subject.requests(params)
-    expect(response.result.first.movie_title_clean).to eq("American Wedding")
+  it "should get movie bookmarks", :vcr do
+    params = { user_key: ENV["user_key"], movie_id: 353, with_rt_rattings: true }
+    response = subject.get_movie_bookmarks(params)
+    expect(response.result.movies.first.id).to eq(353)
   end
 
-  it "should add a request", :vcr do
-    params = { hash: ENV["hash"], request: "tt0111161" }
-    response = subject.make_request(params)
-    expect(response.result.error).to include("Movie has already been uploaded")
+  it "should add a movie bookmark", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.add_movie_bookmark(params)
+    expect(request.response["status_message"]).to eq("Movie has been successfully bookmarked")
   end
 
-  it "should vote on requests", :vcr do
-    params = { hash: ENV["hash"], requestid: "1169" }
-    response = subject.vote(params)
-    expect(response.result.status).to include("Vote submission successful")
+  it "should delete a movie bookmark", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    request = subject.delete_movie_bookmark(params)
+    expect(request.response["status_message"]).to eq("Movie bookmarked has been removed")
   end
+
+  it "should make a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353, comment_text: "Hello World!" }
+    request = subject.make_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully submitted")
+  end
+
+  it "should like a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.like_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully liked")
+  end
+
+  it "should report a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.report_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully reported")
+  end
+
+  it "should delete a comment", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], comment_id: 379208 }
+    request = subject.delete_comment(params)
+    expect(request.response["status_message"]).to eq("Comment has been successfully deleted")
+  end
+
+  it "should make a request", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_title: "Hello World!", request_message: "Please ignore this request!" }
+    request = subject.make_request(params)
+    expect(request.response["status_message"]).to eq("Request has been successfully submitted")
+  end
+
 end
 

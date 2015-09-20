@@ -13,6 +13,7 @@ require 'yify/models/profile.rb'
 require 'yify/models/api_response.rb'
 require 'yify/models/parental_guide.rb'
 require 'yify/models/session.rb'
+require 'yify/models/bookmark.rb'
 require 'yify/response'
 require 'yify/client'
 

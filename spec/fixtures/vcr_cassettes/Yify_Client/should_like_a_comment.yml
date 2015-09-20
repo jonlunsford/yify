@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/v2/user_get_key
+    uri: http://yts.to/api/v2/like_comment
     body:
       encoding: UTF-8
-      string: application_key=<APPLICATION_KEY>&username=<USERNAME>&password=<PASSWORD>
+      string: application_key=<APPLICATION_KEY>&user_key=<USER_KEY>&comment_id=379208
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 20 Sep 2015 04:09:32 GMT
+      - Sun, 20 Sep 2015 21:35:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -52,8 +52,8 @@ http_interactions:
       - LU
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"User successfully logged in","data":{"user_id":"<UDER_ID>","username":"<USERNAME>","email":"<EMAIL>","user_key":"<USER_KEY>"},"@meta":{"server_time":1442721939,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"23.38
+      string: '{"status":"ok","status_message":"Comment has been successfully liked","data":{"comment_id":379208,"user_id":1247782},"@meta":{"server_time":1442784709,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"8.21
         ms"}}'
-    http_version:
-  recorded_at: Sun, 20 Sep 2015 04:05:39 GMT
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 21:31:49 GMT
 recorded_with: VCR 2.9.3

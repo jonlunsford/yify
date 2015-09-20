@@ -250,7 +250,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def like_movie(params)
       data = self.class.post("/like_movie", { body: params })
       Yify::Response.new(data, :api_response)
@@ -265,9 +264,8 @@ module Yify
     #   user_key: String (required)
     #   with_rt_rattings: Boolean
     #
-    # @returns [Yify::Models::BookMark]
+    # @returns [Yify::Models::Bookmark]
 
-    # STUB: NOT IMPLEMENTED
     def get_movie_bookmarks(params)
       data = self.class.get("/get_movie_bookmarks", { query: params })
       Yify::Response.new(data, :bookmarks)
@@ -283,12 +281,11 @@ module Yify
     #   movie_id: Integer (required)
     #   application_key: String (required)
     #
-    # @returns [Yify::Models::ApiResponse]
+    # @returns Yify::Models::Bookmark
 
-    # STUB: NOT IMPLEMENTED
     def add_movie_bookmark(params)
       data = self.class.post("/add_movie_bookmark", { body: params })
-      Yify::Response.new(data, :api_response)
+      Yify::Response.new(data, :bookmark)
     end
 
     # [POST] delete_movie_bookmark
@@ -301,9 +298,8 @@ module Yify
     #   movie_id: Integer (required)
     #   application_key: String (required)
     #
-    # @returns [Yify::Models::ApiResponse]
+    # @returns Yify::Models::Bookmark
 
-    # STUB: NOT IMPLEMENTED
     def delete_movie_bookmark(params)
       data = self.class.post("/delete_movie_bookmark", { body: params })
       Yify::Response.new(data, :api_response)
@@ -322,7 +318,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def make_comment(params)
       data = self.class.post("/make_comment", { body: params })
       Yify::Response.new(data, :api_response)
@@ -340,7 +335,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def like_comment(params)
       data = self.class.post("/like_comment", { body: params })
       Yify::Response.new(data, :api_response)
@@ -358,7 +352,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def report_comment(params)
       data = self.class.post("/report_comment", { body: params })
       Yify::Response.new(data, :api_response)
@@ -376,7 +369,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def delete_comment(params)
       data = self.class.post("/delete_comment", { body: params })
       Yify::Response.new(data, :api_response)
@@ -395,7 +387,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def make_request(params)
       data = self.class.post("/make_request", { body: params })
       Yify::Response.new(data, :api_response)

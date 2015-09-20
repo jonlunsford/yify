@@ -39,7 +39,7 @@ module Yify
           :movie
         when :request_list
           :movie
-        when :upcomming_movies
+        when :upcoming_movies
           :movie
         when :movie_suggestions
           :movie
