@@ -51,7 +51,7 @@ POST request. You can request an `application_key` [here](https://yts.to/contact
 
 #### API Documentation
 
-You can view the full YTS API documentation [here](hhttps://yts.to/api). Every
+You can view the full YTS API documentation [here](https://yts.to/api). Every
 request documented is implemented by this gem, please file an issue if you find
 a request that is not implemented.
 
