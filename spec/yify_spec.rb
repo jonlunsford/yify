@@ -50,62 +50,62 @@ describe Yify::Client do
     expect(response.result.username).to eq("YIFY")
   end
 
-  # TODO POST requests, waiting on application_key from YTS
+  it "should get a user key", :vcr do
+    params = { application_key: ENV["application_key"], username: ENV["username"], password: ENV["password"] }
+    request = subject.user_get_key(params)
+    expect(request.response["status_message"]).to eq("User successfully logged in")
+  end
+
+  it "should get a user profile", :vcr do
+    response = subject.user_profile(ENV["user_key"])
+    expect(response.result.group).to eq("user")
+  end
+
+  it "should edit a user profile", :vcr do
+    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], about_text: "RUBY FTW!" }
+    response = subject.user_edit_settings(params)
+    expect(response.result.about_text).to eq("RUBY FTW!")
+  end
+
   it "should register a user", :vcr do
-    options = { username: ENV["username"], password: ENV["password"], email: ENV["email"] }
-    response = subject.register(options)
-    expect(response.result.status).to include("An activation email has been sent")
+    params = { application_key: ENV["application_key"], username: ENV["username"], password: ENV["password"], email: ENV["email"] }
+    request = subject.user_register(params)
+    expect(request.response["status_message"]).to eq("User was successfully registered")
   end
 
-  it "should login a user", :vcr do
-    options = { username: ENV["username"], password: ENV["password"] }
-    response = subject.login(options)
-    expect(response.result.hash).to eq(ENV["hash"])
-  end
-
-  it "should recover passwords", :vcr do
-    response = subject.send_password_reset(ENV["email"])
-    expect(response.result.status).to include("password reset code has been sent")
+  it "should recover forgotten passwords", :vcr do
+    params = { application_key: ENV["application_key"], email: ENV["email"] }
+    request = subject.user_forgot_password(params)
+    expect(request.response["status_message"]).to eq("Reset password code has been sent")
   end
 
   it "should reset a password", :vcr do
-    options = { code: ENV["code"], newpassword: ENV["new_password"] }
-    response = subject.reset_password(options)
-    expect(response.result.status).to include("password has been changed")
-  end
-
-  it "should get a profile", :vcr do
-    response = subject.profile(ENV["hash"])
-    expect(response.result.user_id).to eq(ENV["user_id"].to_i)
-  end
-
-  it "should edit a profile", :vcr do
-    options = { hash: ENV["hash"], about: "RUBY FTW!" }
-    response = subject.update_profile(options)
-    expect(response.result.status).to include("changes made successfully")
+    params = { application_key: ENV["application_key"], reset_code: ENV["reset_code"], new_password: ENV["new_password"] }
+    request = subject.user_reset_password(params)
+    expect(request.response["status_message"]).to eq("User password was successfully changed")
   end
 
   it "should post a comment", :vcr do
-    options = { hash: ENV["hash"], text: "RUBY FTW!", movieid: 353 }
-    response = subject.post_comment(options)
+    params = { hash: ENV["hash"], text: "RUBY FTW!", movieid: 353 }
+    response = subject.post_comment(params)
     expect(response.result.status).to include("successfully posted comment")
   end
 
   it "should get requests list", :vcr do
-    options = { page: "confirmed", limit: 2 }
-    response = subject.requests(options)
+    params = { page: "confirmed", limit: 2 }
+    response = subject.requests(params)
     expect(response.result.first.movie_title_clean).to eq("American Wedding")
   end
 
   it "should add a request", :vcr do
-    options = { hash: ENV["hash"], request: "tt0111161" }
-    response = subject.make_request(options)
+    params = { hash: ENV["hash"], request: "tt0111161" }
+    response = subject.make_request(params)
     expect(response.result.error).to include("Movie has already been uploaded")
   end
 
   it "should vote on requests", :vcr do
-    options = { hash: ENV["hash"], requestid: "1169" }
-    response = subject.vote(options)
+    params = { hash: ENV["hash"], requestid: "1169" }
+    response = subject.vote(params)
     expect(response.result.status).to include("Vote submission successful")
   end
 end

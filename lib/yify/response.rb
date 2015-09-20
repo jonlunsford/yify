@@ -16,7 +16,7 @@ module Yify
 
     def normalized_response
       result = symbolize_keys(@response)
-      result = extract(result[:data], @model)
+      result = extract(result[:data] || result, @model)
 
       @result.clear
       @result = hydrate_model(result)

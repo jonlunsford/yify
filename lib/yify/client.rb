@@ -148,9 +148,8 @@ module Yify
     #
     # @returns [Yify::Models::Session]
 
-    # STUB: NOT IMPLEMENTED
     def user_get_key(params)
-      data = self.class.get("/user_get_key", { body: params })
+      data = self.class.post("/user_get_key", { body: params })
       Yify::Response.new(data, :session)
     end
 
@@ -162,12 +161,11 @@ module Yify
     # @params
     #   user_key: String (required) response from user_get_key
     #
-    # @returns Yify::Models::Profile
+    # @returns Yify::Models::User
 
-    # STUB: NOT IMPLEMENTED
     def user_profile(user_key)
-      data = self.class.get("/profile", { query: { user_key: user_key } })
-      Yify::Response.new(data, :profile)
+      data = self.class.get("/user_profile", { query: { user_key: user_key } })
+      Yify::Response.new(data, :user)
     end
 
     # [POST] user_edit_settings
@@ -182,12 +180,11 @@ module Yify
     #   about_text: String
     #   avatar_image: img, jpg, jpef, gif, png (10MB max)
     #
-    # @returns Yify::Models::ApiResponse
+    # @returns Yify::Models::User
 
-    # STUB: NOT IMPLEMENTED
     def user_edit_settings(params)
       data = self.class.post("/user_edit_settings", { body: params })
-      Yify::Response.new(data, :api_response)
+      Yify::Response.new(data, :user)
     end
 
     # [POST] user_register
@@ -201,12 +198,11 @@ module Yify
     #   password: String (required)
     #   email: String (required)
     #
-    # @returns Yify::Models::ApiResponse
+    # @returns Yify::Models::Session
 
-    # STUB: NOT IMPLEMENTED
     def user_register(params)
       data = self.class.post("/user_register", { body: params })
-      Yify::Response.new(data, :api_response)
+      Yify::Response.new(data, :session)
     end
 
     # [POST] user_forgot_password
@@ -220,7 +216,6 @@ module Yify
     #
     # @returns Yify::Models::ApiResponse
 
-    # STUB: NOT IMPLEMENTED
     def user_forgot_password(params)
       data = self.class.post("/user_forgot_password", { body: params })
       Yify::Response.new(data, :api_response)
@@ -236,12 +231,11 @@ module Yify
     #   new_password: String (required)
     #   application_key: String (required)
     #
-    # @returns Yify::Models::ApiResponse
+    # @returns Yify::Models::Session
 
-    # STUB: NOT IMPLEMENTED
     def user_reset_password(params)
       data = self.class.post("/user_reset_password", { body: params })
-      Yify::Response.new(data, :api_response)
+      Yify::Response.new(data, :session)
     end
 
     # [POST] like_movie
