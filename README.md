@@ -183,6 +183,7 @@ filtering out sensitive data from the cassettes.
 
 ## Change Log
 
+- **0.0.4:** Add application_key configuration
 - **0.0.3:** Implement YTS API V2
 - **0.0.2:** Update base_uri from yts.re -> yts.to
 - **0.0.1:** Initial release
