@@ -48,6 +48,11 @@ module Yify
         end
       end
 
+      def post_params(params)
+        params[:application_key] = @application_key unless @application_key.nil?
+        params
+      end
+
     end
   end
 end

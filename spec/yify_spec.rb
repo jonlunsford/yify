@@ -10,6 +10,16 @@ describe Yify::Client do
     expect(subject.class.base_uri).to eq("http://yts.to/api/v2")
   end
 
+  it "should set an application_key" do
+    client = Yify::Client.new(ENV["application_key"])
+    expect(client.application_key).to eq(ENV["application_key"])
+  end
+
+  it "should set an application_key from an ENV variable" do
+    client = Yify::Client.new
+    expect(client.application_key).to eq(ENV["application_key"])
+  end
+
   it "should list movies", :vcr do
     response = subject.list_movies({ limit: 3 })
     expect(response.result.count).to eq(3)
@@ -98,7 +108,7 @@ describe Yify::Client do
   end
 
   it "should add a movie bookmark", :vcr do
-    params = { application_key: ENV["application_key"], user_key: ENV["user_key"], movie_id: 353 }
+    params = { user_key: ENV["user_key"], movie_id: 353 }
     request = subject.add_movie_bookmark(params)
     expect(request.response["status_message"]).to eq("Movie has been successfully bookmarked")
   end

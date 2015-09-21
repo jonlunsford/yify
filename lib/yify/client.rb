@@ -2,9 +2,17 @@
 
 module Yify
   class Client
+    include Yify::Support::Utils
     include HTTParty
+
+    attr_accessor :application_key
+
     base_uri 'http://yts.to/api/v2'
     format :json
+
+    def initialize(application_key = nil)
+      @application_key = application_key || ENV["yify_application_key"]
+    end
 
     # [GET] list_movies
     # See: https://yts.to/api#list_movies
@@ -149,7 +157,7 @@ module Yify
     # @returns [Yify::Models::Session]
 
     def user_get_key(params)
-      data = self.class.post("/user_get_key", { body: params })
+      data = self.class.post("/user_get_key", { body: post_params(params) })
       Yify::Response.new(data, :session)
     end
 
@@ -183,7 +191,7 @@ module Yify
     # @returns Yify::Models::User
 
     def user_edit_settings(params)
-      data = self.class.post("/user_edit_settings", { body: params })
+      data = self.class.post("/user_edit_settings", { body: post_params(params) })
       Yify::Response.new(data, :user)
     end
 
@@ -201,7 +209,7 @@ module Yify
     # @returns Yify::Models::Session
 
     def user_register(params)
-      data = self.class.post("/user_register", { body: params })
+      data = self.class.post("/user_register", { body: post_params(params) })
       Yify::Response.new(data, :session)
     end
 
@@ -217,7 +225,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def user_forgot_password(params)
-      data = self.class.post("/user_forgot_password", { body: params })
+      data = self.class.post("/user_forgot_password", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -234,7 +242,7 @@ module Yify
     # @returns Yify::Models::Session
 
     def user_reset_password(params)
-      data = self.class.post("/user_reset_password", { body: params })
+      data = self.class.post("/user_reset_password", { body: post_params(params) })
       Yify::Response.new(data, :session)
     end
 
@@ -251,7 +259,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def like_movie(params)
-      data = self.class.post("/like_movie", { body: params })
+      data = self.class.post("/like_movie", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -284,7 +292,7 @@ module Yify
     # @returns Yify::Models::Bookmark
 
     def add_movie_bookmark(params)
-      data = self.class.post("/add_movie_bookmark", { body: params })
+      data = self.class.post("/add_movie_bookmark", { body: post_params(params) })
       Yify::Response.new(data, :bookmark)
     end
 
@@ -301,7 +309,7 @@ module Yify
     # @returns Yify::Models::Bookmark
 
     def delete_movie_bookmark(params)
-      data = self.class.post("/delete_movie_bookmark", { body: params })
+      data = self.class.post("/delete_movie_bookmark", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -319,7 +327,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def make_comment(params)
-      data = self.class.post("/make_comment", { body: params })
+      data = self.class.post("/make_comment", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -336,7 +344,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def like_comment(params)
-      data = self.class.post("/like_comment", { body: params })
+      data = self.class.post("/like_comment", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -353,7 +361,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def report_comment(params)
-      data = self.class.post("/report_comment", { body: params })
+      data = self.class.post("/report_comment", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -370,7 +378,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def delete_comment(params)
-      data = self.class.post("/delete_comment", { body: params })
+      data = self.class.post("/delete_comment", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
@@ -388,7 +396,7 @@ module Yify
     # @returns Yify::Models::ApiResponse
 
     def make_request(params)
-      data = self.class.post("/make_request", { body: params })
+      data = self.class.post("/make_request", { body: post_params(params) })
       Yify::Response.new(data, :api_response)
     end
 
