@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/v2/user_profile?user_key=<USER_KEY>
+    uri: http://yts.ag/api/v2/user_profile?user_key=<USER_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -48,7 +48,7 @@ http_interactions:
       - CA
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"id":<USER_ID>"username":"<USERNAME>","email":"<EMAIL>","group":"user","ip_address":"<IP_ADDRESS>","user_key":"<USER_KEY>","url":"http:\/\/yts.to\/user\/<USERNAME>","profile_hidden":false,"about_text":null,"small_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/thumb\/default_avatar.jpg","medium_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/default_avatar.jpg","date_joined":"2015-09-20
+      string: '{"status":"ok","status_message":"Query was successful","data":{"id":<USER_ID>"username":"<USERNAME>","email":"<EMAIL>","group":"user","ip_address":"<IP_ADDRESS>","user_key":"<USER_KEY>","url":"http:\/\/yts.ag\/user\/<USERNAME>","profile_hidden":false,"about_text":null,"small_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/thumb\/default_avatar.jpg","medium_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/default_avatar.jpg","date_joined":"2015-09-20
         14:11:41","date_joined_unix":1442715101,"date_last_seen":"2015-09-20 14:11:41","date_last_seen_unix":1442715101},"@meta":{"server_time":1442722489,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"2.01
         ms"}}'
     http_version:

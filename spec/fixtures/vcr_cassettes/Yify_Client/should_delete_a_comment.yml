@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/v2/delete_comment
+    uri: http://yts.ag/api/v2/delete_comment
     body:
       encoding: UTF-8
       string: application_key=<APPLICATION_KEY>&user_key=<USER_KEY>&comment_id=379208

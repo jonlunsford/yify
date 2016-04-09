@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/yify.svg)](http://badge.fury.io/rb/yify)
 
-A Ruby wrapper for the [Yify Torrents API](https://yts.to/api)
+A Ruby wrapper for the [Yify Torrents API](https://yts.ag/api)
 
 ## Installation
 
@@ -33,7 +33,7 @@ require 'yify'
 ##### Configuration
 
 If you plan on making POST requests you must provide an `application_key` by
-requesting one [here](https://yts.to/contact). Please note that the email from
+requesting one [here](https://yts.ag/contact). Please note that the email from
 Yify will be in your spam folder 99.9% of the time, so check there :)
 
 You can configure your Yify client by passing in your `application_key` directly,
@@ -155,7 +155,7 @@ client.response
 
 ## API Documentation
 
-You can view the full YTS API documentation [here](https://yts.to/api). Every
+You can view the full YTS API documentation [here](https://yts.ag/api). Every
 request documented is implemented by this gem, please file an issue if you find
 a request that is not implemented.
 
@@ -183,6 +183,7 @@ filtering out sensitive data from the cassettes.
 
 ## Change Log
 
+- **0.0.5:** Update base_uri from yts.to -> yts.ag
 - **0.0.4:** Add application_key configuration
 - **0.0.3:** Implement YTS API V2
 - **0.0.2:** Update base_uri from yts.re -> yts.to

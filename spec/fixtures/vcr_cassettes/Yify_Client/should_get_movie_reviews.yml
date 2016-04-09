@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/v2/movie_reviews?movie_id=353
+    uri: http://yts.ag/api/v2/movie_reviews?movie_id=353
     body:
       encoding: US-ASCII
       string: ''

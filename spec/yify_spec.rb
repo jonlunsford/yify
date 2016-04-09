@@ -7,7 +7,7 @@ describe Yify::Client do
   end
 
   it "should have a base_uri configured" do
-    expect(subject.class.base_uri).to eq("http://yts.to/api/v2")
+    expect(subject.class.base_uri).to eq("http://yts.ag/api/v2")
   end
 
   it "should set an application_key" do
