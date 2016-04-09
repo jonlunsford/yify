@@ -1,4 +1,4 @@
-# A ruby wrapper for the YIFY Torrents API (https://yts.to/api)
+# A ruby wrapper for the YIFY Torrents API (https://yts.ag/api)
 
 module Yify
   class Client
@@ -7,7 +7,7 @@ module Yify
 
     attr_accessor :application_key
 
-    base_uri 'http://yts.to/api/v2'
+    base_uri 'http://yts.ag/api/v2'
     format :json
 
     def initialize(application_key = nil)
@@ -15,7 +15,7 @@ module Yify
     end
 
     # [GET] list_movies
-    # See: https://yts.to/api#list_movies
+    # See: https://yts.ag/api#list_movies
     #
     # Get a list of movies, this method can be used to search
     # or filter.
@@ -39,7 +39,7 @@ module Yify
     end
 
     # [GET] movie_details
-    # See: https://yts.to/api#movie_details
+    # See: https://yts.ag/api#movie_details
     #
     # Get movie details.
     #
@@ -56,7 +56,7 @@ module Yify
     end
 
     # [GET] movie_suggestions
-    # See: https://yts.to/api#movie_suggestions
+    # See: https://yts.ag/api#movie_suggestions
     #
     # Returns 4 related movies as suggestions for the user
     #
@@ -71,7 +71,7 @@ module Yify
     end
 
     # [GET] movie_comments
-    # See: https://yts.to/api#movie_comments
+    # See: https://yts.ag/api#movie_comments
     #
     # Get comments for the desired movie
     #
@@ -86,7 +86,7 @@ module Yify
     end
 
     # [GET] movie_reviews
-    # See: https://yts.to/api#movie_reviews
+    # See: https://yts.ag/api#movie_reviews
     #
     # Get reviews for the desired movie
     #
@@ -101,7 +101,7 @@ module Yify
     end
 
     # [GET] movie_parental_guides
-    # See: https://yts.to/api#movie_parental_guides
+    # See: https://yts.ag/api#movie_parental_guides
     #
     # Get parental guides for the desired movie
     #
@@ -116,7 +116,7 @@ module Yify
     end
 
     # [GET] list_upcoming
-    # See: https://yts.to/api#list_upcoming
+    # See: https://yts.ag/api#list_upcoming
     #
     # A list of all upcoming movies.
     #
@@ -128,7 +128,7 @@ module Yify
     end
 
     # [GET] user_details
-    # See: https://yts.to/api#user_details
+    # See: https://yts.ag/api#user_details
     #
     # Get desired users' details.
     #
@@ -144,7 +144,7 @@ module Yify
     end
 
     # [POST] get_user_key
-    # See: https://yts.to/api#get_user_key
+    # See: https://yts.ag/api#get_user_key
     #
     # The same as logging in, if successful the returned data will
     # include the user_key for later use of the API as a means of authentication
@@ -162,7 +162,7 @@ module Yify
     end
 
     # [GET] user_profile
-    # See: https://yts.to/api#user_profile
+    # See: https://yts.ag/api#user_profile
     #
     # Get a logged in user's profile.
     #
@@ -177,7 +177,7 @@ module Yify
     end
 
     # [POST] user_edit_settings
-    # See: https://yts.to/api#user_edit_settings
+    # See: https://yts.ag/api#user_edit_settings
     #
     # update a logged in user's profile.
     #
@@ -196,7 +196,7 @@ module Yify
     end
 
     # [POST] user_register
-    # See: https://yts.to/api#user_register
+    # See: https://yts.ag/api#user_register
     #
     # Register a new user with Yify.
     #
@@ -214,7 +214,7 @@ module Yify
     end
 
     # [POST] user_forgot_password
-    # https://yts.to/api#user_forgot_password
+    # https://yts.ag/api#user_forgot_password
     #
     # Send a password reset email to the specified email address.
     #
@@ -230,7 +230,7 @@ module Yify
     end
 
     # [POST] user_reset_password
-    # See: https://yts.to/api#user_reset_password
+    # See: https://yts.ag/api#user_reset_password
     #
     # Reset the users' password.
     #
@@ -247,7 +247,7 @@ module Yify
     end
 
     # [POST] like_movie
-    # See: https://yts.to/api#like_movie
+    # See: https://yts.ag/api#like_movie
     #
     # Reset the users' password.
     #
@@ -264,7 +264,7 @@ module Yify
     end
 
     # [GET] get_movie_bookmarks
-    # See: https://yts.to/api#get_movie_bookmarks
+    # See: https://yts.ag/api#get_movie_bookmarks
     #
     # Get all the current movies which have been bookmarked for a given user
     #
@@ -280,7 +280,7 @@ module Yify
     end
 
     # [POST] add_movie_bookmark
-    # See: https://yts.to/api#add_movie_bookmark
+    # See: https://yts.ag/api#add_movie_bookmark
     #
     # Get all the current movies which have been bookmarked for a given user
     #
@@ -297,7 +297,7 @@ module Yify
     end
 
     # [POST] delete_movie_bookmark
-    # See: https://yts.to/api#delete_movie_bookmark
+    # See: https://yts.ag/api#delete_movie_bookmark
     #
     # remove movies from the user's bookmarks
     #
@@ -314,7 +314,7 @@ module Yify
     end
 
     # [POST] make_comment
-    # See: https://yts.to/api#make_comment
+    # See: https://yts.ag/api#make_comment
     #
     # Add comment to a movie.
     #
@@ -332,7 +332,7 @@ module Yify
     end
 
     # [POST] like_comment
-    # See: https://yts.to/api#like_comment
+    # See: https://yts.ag/api#like_comment
     #
     # Like a comment on a movie
     #
@@ -349,7 +349,7 @@ module Yify
     end
 
     # [POST] report_comment
-    # See: https://yts.to/api#report_comment
+    # See: https://yts.ag/api#report_comment
     #
     # Report a comment on a movie
     #
@@ -366,7 +366,7 @@ module Yify
     end
 
     # [POST] delete_comment
-    # See: https://yts.to/api#delete_comment
+    # See: https://yts.ag/api#delete_comment
     #
     # Delete a comment on a movie
     #
@@ -383,7 +383,7 @@ module Yify
     end
 
     # [POST] make_request
-    # See: https://yts.to/api#make_request
+    # See: https://yts.ag/api#make_request
     #
     # Request a movie to be added to Yify.
     #

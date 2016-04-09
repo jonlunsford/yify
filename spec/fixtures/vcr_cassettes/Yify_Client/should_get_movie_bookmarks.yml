@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.to/api/v2/get_movie_bookmarks?movie_id=353&user_key=<USER_KEY>&with_rt_rattings=true
+    uri: http://yts.ag/api/v2/get_movie_bookmarks?movie_id=353&user_key=<USER_KEY>&with_rt_rattings=true
     body:
       encoding: US-ASCII
       string: ''
@@ -48,9 +48,9 @@ http_interactions:
       - DE
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"bookmark_count":1,"movies":[{"id":353,"url":"http:\/\/yts.to\/movie\/confessions-of-a-dangerous-mind-2002","imdb_code":"tt0270288","title":"Confessions
-        of a Dangerous Mind","title_long":"Confessions of a Dangerous Mind (2002)","slug":"confessions-of-a-dangerous-mind-2002","year":2002,"rating":7.1,"runtime":113,"genres":["Biography","Comedy"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.to\/torrent\/download\/32995A7FE823D6668BFC37A5853BF7EB798E0974.torrent","hash":"32995A7FE823D6668BFC37A5853BF7EB798E0974","quality":"720p","seeds":51,"peers":8,"size":"701.42
-        MB","size_bytes":735492178,"date_uploaded":"2011-11-02 11:56:20","date_uploaded_unix":1320188180},{"url":"http:\/\/yts.to\/torrent\/download\/5F803C0D541CBAA57CDFAA330CC28B5377A6D946.torrent","hash":"5F803C0D541CBAA57CDFAA330CC28B5377A6D946","quality":"1080p","seeds":70,"peers":17,"size":"1.65
+      string: '{"status":"ok","status_message":"Query was successful","data":{"bookmark_count":1,"movies":[{"id":353,"url":"http:\/\/yts.ag\/movie\/confessions-of-a-dangerous-mind-2002","imdb_code":"tt0270288","title":"Confessions
+        of a Dangerous Mind","title_long":"Confessions of a Dangerous Mind (2002)","slug":"confessions-of-a-dangerous-mind-2002","year":2002,"rating":7.1,"runtime":113,"genres":["Biography","Comedy"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/32995A7FE823D6668BFC37A5853BF7EB798E0974.torrent","hash":"32995A7FE823D6668BFC37A5853BF7EB798E0974","quality":"720p","seeds":51,"peers":8,"size":"701.42
+        MB","size_bytes":735492178,"date_uploaded":"2011-11-02 11:56:20","date_uploaded_unix":1320188180},{"url":"http:\/\/yts.ag\/torrent\/download\/5F803C0D541CBAA57CDFAA330CC28B5377A6D946.torrent","hash":"5F803C0D541CBAA57CDFAA330CC28B5377A6D946","quality":"1080p","seeds":70,"peers":17,"size":"1.65
         GB","size_bytes":1767811234,"date_uploaded":"2015-01-02 19:34:48","date_uploaded_unix":1420180488}],"date_uploaded":"2011-11-02
         11:56:20","date_uploaded_unix":1320188180}]},"@meta":{"server_time":1442783862,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"5.23
         ms"}}'

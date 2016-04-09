@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/v2/user_edit_settings
+    uri: http://yts.ag/api/v2/user_edit_settings
     body:
       encoding: UTF-8
       string: application_key=<APPLICATION_KEY>&user_key=<USER_KEY>&about_text=RUBY%20FTW%21
@@ -52,7 +52,7 @@ http_interactions:
       - DE
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"User settings saved","data":{"id":<USER_ID>"username":"<USERNAME>","email":"<EMAIL>","group":"user","ip_address":"<IP_ADDRESS>","user_key":"<USER_KEY>","url":"http:\/\/yts.to\/user\/<USERNAME_VARIANT>","profile_hidden":false,"about_text":"RUBY
+      string: '{"status":"ok","status_message":"User settings saved","data":{"id":<USER_ID>"username":"<USERNAME>","email":"<EMAIL>","group":"user","ip_address":"<IP_ADDRESS>","user_key":"<USER_KEY>","url":"http:\/\/yts.ag\/user\/<USERNAME_VARIANT>","profile_hidden":false,"about_text":"RUBY
         FTW!","small_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/thumb\/default_avatar.jpg","medium_avatar_image":"http:\/\/s.ynet.io\/assets\/images\/users\/default_avatar.jpg","date_joined":"2015-09-20
         14:11:41","date_joined_unix":1442715101,"date_last_seen":"2015-09-20 16:32:45","date_last_seen_unix":1442723565},"@meta":{"server_time":1442723565,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"7.66
         ms"}}'

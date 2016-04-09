@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/v2/user_get_key
+    uri: http://yts.ag/api/v2/user_get_key
     body:
       encoding: UTF-8
       string: application_key=<APPLICATION_KEY>&username=<USERNAME>&password=<PASSWORD>

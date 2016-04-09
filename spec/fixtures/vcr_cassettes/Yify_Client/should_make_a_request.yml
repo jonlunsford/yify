@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://yts.to/api/v2/make_request
+    uri: http://yts.ag/api/v2/make_request
     body:
       encoding: UTF-8
       string: application_key=<APPLICATION_KEY>&user_key=<USER_KEY>&movie_title=Hello%20World%21&request_message=Please%20ignore%20this%20request%21
