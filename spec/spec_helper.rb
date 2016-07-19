@@ -1,10 +1,11 @@
 require "yify"
 require "vcr"
-require "pry-byebug"
 
 VCR.configure do |c|
+  c.default_cassette_options = { :record => :new_episodes }
   c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   c.hook_into :webmock
+  c.configure_rspec_metadata!
   c.filter_sensitive_data("<USERNAME>") { ENV["username"] }
   c.filter_sensitive_data("<USERNAME>") { ENV["username_variant"] }
   c.filter_sensitive_data("<PASSWORD>") { ENV["password"] }
@@ -18,9 +19,3 @@ VCR.configure do |c|
   c.filter_sensitive_data("<PASSWORD_RESET_CODE>") { ENV["reset_code"] }
 end
 
-RSpec.configure do |c|
-  c.around(:each, :vcr) do |example|
-    name = example.metadata[:full_description].split(/\s+/, 2).join("/").gsub(/[^\w\/]+/, "_")
-    VCR.use_cassette(name) { example.call }
-  end
-end

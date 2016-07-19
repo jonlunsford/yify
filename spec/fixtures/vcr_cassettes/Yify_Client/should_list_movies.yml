@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.ag/api/v2/list_movies?limit=3
+    uri: https://yts.ag/api/v2/list_movies.json?limit=3
     body:
       encoding: US-ASCII
       string: ''
@@ -18,50 +18,131 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 15 Sep 2015 20:35:55 GMT
+      - Mon, 18 Jul 2016 14:45:36 GMT
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - PHPSESSID=fr0ft7r9dnbc77boq40pl6qkn0; path=/
+      - __cfduid=d9dcb3929fa3a24ee9243739378df13ff1468853135; expires=Tue, 18-Jul-17
+        14:45:35 GMT; path=/; domain=.yts.ag; HttpOnly
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+      Expires:
+      - Mon, 25 Jul 2016 14:45:36 GMT
       Cache-Control:
-      - public, s-maxage=21600
+      - max-age=604800
+      Pragma:
+      - no-cache
+      X-Varnish:
+      - '426284873'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish-v4
+      Strict-Transport-Security:
+      - max-age=15638400
+      - max-age=63072000; preload
       Access-Control-Allow-Origin:
       - "*"
       X-Frame-Options:
-      - SAMEORIGIN
-      - SAMEORIGIN
+      - DENY
       X-Content-Type-Options:
       - nosniff
-      - nosniff
-      Age:
-      - '0'
-      X-Cache:
-      - uncached
-      Accept-Ranges:
-      - bytes
-      X-Frontend:
-      - NL
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2c46b7e0869e1ee9-SJC
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":4435,"limit":3,"page_number":1,"movies":[{"id":4467,"url":"http:\/\/yts.ag\/movie\/spy-2015","imdb_code":"tt3079380","title":"Spy","title_long":"Spy
-        (2015)","slug":"spy-2015","year":2015,"rating":7.3,"runtime":119,"genres":["Action","Comedy"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/spy_2015\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/DDF65502DD6719CFFFCD2461F348A6DC95F9D85E.torrent","hash":"DDF65502DD6719CFFFCD2461F348A6DC95F9D85E","quality":"720p","seeds":5801,"peers":10331,"size":"875.07
-        MB","size_bytes":917582481,"date_uploaded":"2015-09-15 16:24:28","date_uploaded_unix":1442291068},{"url":"http:\/\/yts.ag\/torrent\/download\/93748BEF633891AED8A63868746B4ADFDF2C999C.torrent","hash":"93748BEF633891AED8A63868746B4ADFDF2C999C","quality":"1080p","seeds":4644,"peers":9106,"size":"1.95
-        GB","size_bytes":2094281399,"date_uploaded":"2015-09-15 20:02:17","date_uploaded_unix":1442304137}],"date_uploaded":"2015-09-15
-        16:24:15","date_uploaded_unix":1442291055},{"id":4466,"url":"http:\/\/yts.ag\/movie\/a-room-with-a-view-1985","imdb_code":"tt0091867","title":"A
-        Room with a View","title_long":"A Room with a View (1985)","slug":"a-room-with-a-view-1985","year":1985,"rating":7.4,"runtime":117,"genres":["Drama","Romance"],"language":"English","mpa_rating":"Unrated","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/a_room_with_a_view_1985\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/63E08C7557E4EC8592509D1430D105ACED71C4DF.torrent","hash":"63E08C7557E4EC8592509D1430D105ACED71C4DF","quality":"720p","seeds":319,"peers":324,"size":"864.41
-        MB","size_bytes":906401713,"date_uploaded":"2015-09-15 14:09:20","date_uploaded_unix":1442282960},{"url":"http:\/\/yts.ag\/torrent\/download\/593AF7162DF24C59590F5774E55ED962FCF5171F.torrent","hash":"593AF7162DF24C59590F5774E55ED962FCF5171F","quality":"1080p","seeds":420,"peers":456,"size":"1.84
-        GB","size_bytes":1975226196,"date_uploaded":"2015-09-15 14:53:27","date_uploaded_unix":1442285607}],"date_uploaded":"2015-09-15
-        14:09:13","date_uploaded_unix":1442282953},{"id":4465,"url":"http:\/\/yts.ag\/movie\/chain-of-command-2015","imdb_code":"tt4340720","title":"Chain
-        of Command","title_long":"Chain of Command (2015)","slug":"chain-of-command-2015","year":2015,"rating":3.9,"runtime":88,"genres":["Action","Thriller"],"language":"English","mpa_rating":"R","background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/chain_of_command_2015\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/1F5E525874F39CEC1F0175B5AF04A817655DB8C2.torrent","hash":"1F5E525874F39CEC1F0175B5AF04A817655DB8C2","quality":"720p","seeds":1251,"peers":1306,"size":"701.06
-        MB","size_bytes":735114062,"date_uploaded":"2015-09-15 10:06:28","date_uploaded_unix":1442268388},{"url":"http:\/\/yts.ag\/torrent\/download\/0178D5967B27B75EE3BA4E05EC3EE79CB4623073.torrent","hash":"0178D5967B27B75EE3BA4E05EC3EE79CB4623073","quality":"1080p","seeds":1144,"peers":1058,"size":"1.24
-        GB","size_bytes":1333252215,"date_uploaded":"2015-09-15 11:20:18","date_uploaded_unix":1442272818}],"date_uploaded":"2015-09-15
-        10:06:21","date_uploaded_unix":1442268381}]},"@meta":{"server_time":1442349352,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"11.89
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":5546,"limit":3,"page_number":1,"movies":[{"id":5889,"url":"https:\/\/yts.ag\/movie\/deadfall-trail-2009","imdb_code":"tt1285217","title":"Deadfall
+        Trail","title_english":"Deadfall Trail","title_long":"Deadfall Trail (2009)","slug":"deadfall-trail-2009","year":2009,"rating":4.1,"runtime":98,"genres":["Horror","Thriller"],"summary":"The
+        tough, no-nonsense Julian and his more laid-back friend John are a couple
+        of veteran campers who decide to embark on a no-frills expedition into the
+        deep Arizona wilderness. Obnoxious troublemaker and blundering tenderfoot
+        Paul tags along. However, things go horribly awry after John gets seriously
+        wounded and the subsequent pressure causes Julian to degenerate into a ferocious
+        primal state.","description_full":"The tough, no-nonsense Julian and his more
+        laid-back friend John are a couple of veteran campers who decide to embark
+        on a no-frills expedition into the deep Arizona wilderness. Obnoxious troublemaker
+        and blundering tenderfoot Paul tags along. However, things go horribly awry
+        after John gets seriously wounded and the subsequent pressure causes Julian
+        to degenerate into a ferocious primal state.","synopsis":"The tough, no-nonsense
+        Julian and his more laid-back friend John are a couple of veteran campers
+        who decide to embark on a no-frills expedition into the deep Arizona wilderness.
+        Obnoxious troublemaker and blundering tenderfoot Paul tags along. However,
+        things go horribly awry after John gets seriously wounded and the subsequent
+        pressure causes Julian to degenerate into a ferocious primal state.","yt_trailer_code":"UmkuYy5tbFM","language":"English","mpa_rating":"NR","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/deadfall_trail_2009\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/deadfall_trail_2009\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/deadfall_trail_2009\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/deadfall_trail_2009\/medium-cover.jpg","large_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/deadfall_trail_2009\/large-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/721ADA5CE229D843D31374E2C65FFBE79D1A7D18.torrent","hash":"721ADA5CE229D843D31374E2C65FFBE79D1A7D18","quality":"720p","seeds":84,"peers":111,"size":"738.24
+        MB","size_bytes":774100746,"date_uploaded":"2016-07-18 13:24:35","date_uploaded_unix":1468862675},{"url":"https:\/\/yts.ag\/torrent\/download\/42F34C1ACCEB4555B14C69AC128609FCD2E9CFE6.torrent","hash":"42F34C1ACCEB4555B14C69AC128609FCD2E9CFE6","quality":"1080p","seeds":0,"peers":0,"size":"1.5
+        GB","size_bytes":1610612736,"date_uploaded":"2016-07-18 16:15:33","date_uploaded_unix":1468872933}],"date_uploaded":"2016-07-18
+        13:24:35","date_uploaded_unix":1468862675},{"id":5888,"url":"https:\/\/yts.ag\/movie\/aliens-of-the-deep-2005","imdb_code":"tt0417415","title":"Aliens
+        of the Deep","title_english":"Aliens of the Deep","title_long":"Aliens of
+        the Deep (2005)","slug":"aliens-of-the-deep-2005","year":2005,"rating":6.5,"runtime":47,"genres":["Documentary","Family"],"summary":"James
+        Cameron journeys to some of the Earth''s deepest, most extreme and unknown
+        environments in search of the strange and alien creatures that live there.
+        Joining him is a team of young NASA scientists and marine biologists who consider
+        how these life forms represent life we may one day find in outer space not
+        only on distant planets orbiting distant stars, but also within our own solar
+        system. Aliens of the Deep is the result of expeditions to several hydrothermal
+        vent sites in the Atlantic and the Pacific. These are violent volcanic regions
+        where new planet is literally being born and where the interaction between
+        ocean and molten rock creates plumes of super-heated, chemically-charged water
+        that serve as oases for animals unlike anything ever discovered. Six-foot
+        tall worms with blood-red plumes and no stomach, blind white crabs, and a
+        biomass of shrimp capable of \"seeing\" heat all compete to find just the
+        right location in the flow of the super-heated, life-giving water or to fry
+        ...","description_full":"James Cameron journeys to some of the Earth''s deepest,
+        most extreme and unknown environments in search of the strange and alien creatures
+        that live there. Joining him is a team of young NASA scientists and marine
+        biologists who consider how these life forms represent life we may one day
+        find in outer space not only on distant planets orbiting distant stars, but
+        also within our own solar system. Aliens of the Deep is the result of expeditions
+        to several hydrothermal vent sites in the Atlantic and the Pacific. These
+        are violent volcanic regions where new planet is literally being born and
+        where the interaction between ocean and molten rock creates plumes of super-heated,
+        chemically-charged water that serve as oases for animals unlike anything ever
+        discovered. Six-foot tall worms with blood-red plumes and no stomach, blind
+        white crabs, and a biomass of shrimp capable of \"seeing\" heat all compete
+        to find just the right location in the flow of the super-heated, life-giving
+        water or to fry ...","synopsis":"James Cameron journeys to some of the Earth''s
+        deepest, most extreme and unknown environments in search of the strange and
+        alien creatures that live there. Joining him is a team of young NASA scientists
+        and marine biologists who consider how these life forms represent life we
+        may one day find in outer space not only on distant planets orbiting distant
+        stars, but also within our own solar system. Aliens of the Deep is the result
+        of expeditions to several hydrothermal vent sites in the Atlantic and the
+        Pacific. These are violent volcanic regions where new planet is literally
+        being born and where the interaction between ocean and molten rock creates
+        plumes of super-heated, chemically-charged water that serve as oases for animals
+        unlike anything ever discovered. Six-foot tall worms with blood-red plumes
+        and no stomach, blind white crabs, and a biomass of shrimp capable of \"seeing\"
+        heat all compete to find just the right location in the flow of the super-heated,
+        life-giving water or to fry ...","yt_trailer_code":"PsS5IzcNnL8","language":"English","mpa_rating":"G","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/aliens_of_the_deep_2005\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/aliens_of_the_deep_2005\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/aliens_of_the_deep_2005\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/aliens_of_the_deep_2005\/medium-cover.jpg","large_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/aliens_of_the_deep_2005\/large-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/A89464425BEA7E973BC10E5181CEAE6D70CBE289.torrent","hash":"A89464425BEA7E973BC10E5181CEAE6D70CBE289","quality":"720p","seeds":117,"peers":70,"size":"336.93
+        MB","size_bytes":353296712,"date_uploaded":"2016-07-18 08:21:03","date_uploaded_unix":1468844463},{"url":"https:\/\/yts.ag\/torrent\/download\/246C3A71E6837F1E19F27BD3541C4C5FF9CCF770.torrent","hash":"246C3A71E6837F1E19F27BD3541C4C5FF9CCF770","quality":"1080p","seeds":173,"peers":172,"size":"710.27
+        MB","size_bytes":744772076,"date_uploaded":"2016-07-18 10:11:16","date_uploaded_unix":1468851076}],"date_uploaded":"2016-07-18
+        08:21:03","date_uploaded_unix":1468844463},{"id":5887,"url":"https:\/\/yts.ag\/movie\/alexander-the-great-1956","imdb_code":"tt0048937","title":"Alexander
+        the Great","title_english":"Alexander the Great","title_long":"Alexander the
+        Great (1956)","slug":"alexander-the-great-1956","year":1956,"rating":5.8,"runtime":136,"genres":["Biography","Drama","History","War"],"summary":"An
+        epic film that follows the life of Alexander the Great, the macedonian king
+        that united all ancient greek tribes and led them against the vast Persian
+        Empire. Alexander conquered most of the then known world and created a greek
+        empire that spanned all the way from the Balkans to India.","description_full":"An
+        epic film that follows the life of Alexander the Great, the macedonian king
+        that united all ancient greek tribes and led them against the vast Persian
+        Empire. Alexander conquered most of the then known world and created a greek
+        empire that spanned all the way from the Balkans to India.","synopsis":"An
+        epic film that follows the life of Alexander the Great, the macedonian king
+        that united all ancient greek tribes and led them against the vast Persian
+        Empire. Alexander conquered most of the then known world and created a greek
+        empire that spanned all the way from the Balkans to India.","yt_trailer_code":"IuEYgMPqwA4","language":"English","mpa_rating":"G","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/alexander_the_great_1956\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/alexander_the_great_1956\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/alexander_the_great_1956\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/alexander_the_great_1956\/medium-cover.jpg","large_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/alexander_the_great_1956\/large-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/BE29EBE2DC66312D614BB6B29E23BE87709C6A86.torrent","hash":"BE29EBE2DC66312D614BB6B29E23BE87709C6A86","quality":"720p","seeds":117,"peers":103,"size":"1.02
+        GB","size_bytes":1095216660,"date_uploaded":"2016-07-18 02:46:30","date_uploaded_unix":1468824390},{"url":"https:\/\/yts.ag\/torrent\/download\/A3439894B3DEC211BBF16617123CE2CA3CC24FF1.torrent","hash":"A3439894B3DEC211BBF16617123CE2CA3CC24FF1","quality":"1080p","seeds":155,"peers":140,"size":"2.11
+        GB","size_bytes":2265595249,"date_uploaded":"2016-07-18 07:27:25","date_uploaded_unix":1468841245}],"date_uploaded":"2016-07-18
+        02:46:30","date_uploaded_unix":1468824390}]},"@meta":{"server_time":1468853135,"server_timezone":"EST5EDT","api_version":2,"execution_time":"0
         ms"}}'
     http_version: 
-  recorded_at: Tue, 15 Sep 2015 20:35:53 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Mon, 18 Jul 2016 14:45:36 GMT
+recorded_with: VCR 3.0.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.ag/api/v2/movie_details?movie_id=353&with_cast=true&with_images=true
+    uri: https://yts.ag/api/v2/movie_details.json?movie_id=353&with_cast=true&with_images=true
     body:
       encoding: US-ASCII
       string: ''
@@ -18,56 +18,68 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
       Date:
-      - Mon, 14 Sep 2015 23:00:12 GMT
+      - Mon, 18 Jul 2016 14:46:48 GMT
       Content-Type:
-      - application/json
+      - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - PHPSESSID=6hncdl89bk4nn89jfccjsf2l45; path=/
+      - __cfduid=d91141a4452fac9d164291345a29fddfd1468853207; expires=Tue, 18-Jul-17
+        14:46:47 GMT; path=/; domain=.yts.ag; HttpOnly
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+      Expires:
+      - Mon, 25 Jul 2016 14:46:48 GMT
       Cache-Control:
-      - public, s-maxage=21600
+      - max-age=604800
+      Pragma:
+      - no-cache
+      X-Varnish:
+      - '426413825'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish-v4
+      Strict-Transport-Security:
+      - max-age=15638400
+      - max-age=63072000; preload
       Access-Control-Allow-Origin:
       - "*"
       X-Frame-Options:
-      - SAMEORIGIN
-      - SAMEORIGIN
+      - DENY
       X-Content-Type-Options:
       - nosniff
-      - nosniff
-      Age:
-      - '0'
-      X-Cache:
-      - uncached
-      Accept-Ranges:
-      - bytes
-      X-Frontend:
-      - CA
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2c46b9a3ca471e77-SJC
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"id":353,"url":"http:\/\/yts.ag\/movie\/confessions-of-a-dangerous-mind-2002","imdb_code":"tt0270288","title":"Confessions
-        of a Dangerous Mind","title_long":"Confessions of a Dangerous Mind (2002)","slug":"confessions-of-a-dangerous-mind-2002","year":2002,"rating":7.1,"runtime":113,"genres":["Biography","Comedy"],"language":"English","mpa_rating":"R","download_count":64416,"like_count":105,"rt_critics_score":79,"rt_critics_rating":"Certified
-        Fresh","rt_audience_score":75,"rt_audience_rating":"Upright","description_intro":"An
-        adaptation of the cult memoir of game show impresario Chuck Barris, in which
-        he purports to have been a CIA hitman.","description_full":"Television made
-        him famous, but his biggest hits happened off screen. \u0022Confessions of
-        a Dangerous Mind\u0022 is the story of a legendary showman\u0027s double life
-        - television producer by day, CIA assassin by night. At the height of his
-        TV career, Chuck Barris was recruited by the CIA and trained to become a covert
-        operative. Or so Barris said.","yt_trailer_code":"tlZsSLe35z4","date_uploaded":"2011-11-02
-        11:56:20","date_uploaded_unix":1320188180,"images":{"background_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/background.jpg","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-cover.jpg","large_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-cover.jpg","medium_screenshot_image1":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot1.jpg","medium_screenshot_image2":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot2.jpg","medium_screenshot_image3":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/medium-screenshot3.jpg","large_screenshot_image1":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot1.jpg","large_screenshot_image2":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot2.jpg","large_screenshot_image3":"http:\/\/s.ynet.io\/assets\/images\/movies\/Confessions_of_a_Dangerous_Mind_2002\/large-screenshot3.jpg"},"torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/32995A7FE823D6668BFC37A5853BF7EB798E0974.torrent","hash":"32995A7FE823D6668BFC37A5853BF7EB798E0974","quality":"720p","resolution":"1280*536","framerate":23.976,"seeds":44,"peers":8,"size":"701.42
-        MB","size_bytes":735492178,"download_count":50856,"date_uploaded":"2011-11-02
-        11:56:20","date_uploaded_unix":1320188180},{"url":"http:\/\/yts.ag\/torrent\/download\/5F803C0D541CBAA57CDFAA330CC28B5377A6D946.torrent","hash":"5F803C0D541CBAA57CDFAA330CC28B5377A6D946","quality":"1080p","resolution":"1916*800","framerate":23.976,"seeds":60,"peers":13,"size":"1.65
-        GB","size_bytes":1767811234,"download_count":42901,"date_uploaded":"2015-01-02
-        19:34:48","date_uploaded_unix":1420180488}],"directors":[{"name":"George Clooney","small_image":"http:\/\/s.ynet.io\/assets\/images\/directors\/thumb\/nm0000123.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/directors\/nm0000123.jpg","imdb_code":"nm0000123"}],"actors":[{"name":"Sam
-        Rockwell","character_name":"Chuck Barris","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0005377.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0005377.jpg","imdb_code":"nm0005377"},{"name":"Drew
-        Barrymore","character_name":"Penny","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000106.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000106.jpg","imdb_code":"nm0000106"},{"name":"George
-        Clooney","character_name":"Jim Byrd","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000123.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000123.jpg","imdb_code":"nm0000123"},{"name":"Julia
-        Roberts","character_name":"Patricia Watson","small_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/thumb\/nm0000210.jpg","medium_image":"http:\/\/s.ynet.io\/assets\/images\/actors\/nm0000210.jpg","imdb_code":"nm0000210"}]},"@meta":{"server_time":1442271611,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"9.51
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie":{"id":353,"url":"https:\/\/yts.ag\/movie\/back-to-the-future-1985","imdb_code":"tt0088763","title":"Back
+        to the Future","title_english":"Back to the Future","title_long":"Back to
+        the Future (1985)","slug":"back-to-the-future-1985","year":1985,"rating":8.5,"runtime":116,"genres":["Action","Adventure","Comedy","Sci-Fi"],"download_count":176923,"like_count":341,"description_intro":"Marty
+        McFly, a typical American teenager of the Eighties, is accidentally sent back
+        to 1955 in a plutonium-powered DeLorean \"time machine\" invented by a slightly
+        mad scientist. During his often hysterical, always amazing trip back in time,
+        Marty must make certain his teenage parents-to-be meet and fall in love -
+        so he can get back to the future.","description_full":"Marty McFly, a typical
+        American teenager of the Eighties, is accidentally sent back to 1955 in a
+        plutonium-powered DeLorean \"time machine\" invented by a slightly mad scientist.
+        During his often hysterical, always amazing trip back in time, Marty must
+        make certain his teenage parents-to-be meet and fall in love - so he can get
+        back to the future.","yt_trailer_code":"qvsgGtivCgs","language":"English","mpa_rating":"PG","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/medium-cover.jpg","large_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/large-cover.jpg","medium_screenshot_image1":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/medium-screenshot1.jpg","medium_screenshot_image2":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/medium-screenshot2.jpg","medium_screenshot_image3":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/medium-screenshot3.jpg","large_screenshot_image1":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/large-screenshot1.jpg","large_screenshot_image2":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/large-screenshot2.jpg","large_screenshot_image3":"https:\/\/yts.ag\/assets\/images\/movies\/Back_to_the_Future_1985\/large-screenshot3.jpg","cast":[{"name":"Lea
+        Thompson","character_name":"Lorraine Baines","url_small_image":"https:\/\/yts.ag\/assets\/images\/actors\/thumb\/nm0000670.jpg","imdb_code":"0000670"},{"name":"Michael
+        J. Fox","character_name":"Marty McFly","url_small_image":"https:\/\/yts.ag\/assets\/images\/actors\/thumb\/nm0000150.jpg","imdb_code":"0000150"},{"name":"Crispin
+        Glover","character_name":"George McFly","url_small_image":"https:\/\/yts.ag\/assets\/images\/actors\/thumb\/nm0000417.jpg","imdb_code":"0000417"},{"name":"Christopher
+        Lloyd","character_name":"Dr. Emmett Brown","url_small_image":"https:\/\/yts.ag\/assets\/images\/actors\/thumb\/nm0000502.jpg","imdb_code":"0000502"}],"torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/0CE7772B55BEF2DA98C49AA1DF608DEBBB20670F.torrent","hash":"0CE7772B55BEF2DA98C49AA1DF608DEBBB20670F","quality":"720p","seeds":194,"peers":16,"size":"699.65
+        MB","size_bytes":733636198,"date_uploaded":"2015-10-31 21:41:46","date_uploaded_unix":1446342106},{"url":"https:\/\/yts.ag\/torrent\/download\/FB94D1F636CF921A7CD37BA2FFBB3C7FFD680113.torrent","hash":"FB94D1F636CF921A7CD37BA2FFBB3C7FFD680113","quality":"1080p","seeds":21,"peers":2,"size":"1.49
+        GB","size_bytes":1599875318,"date_uploaded":"2015-10-31 21:41:48","date_uploaded_unix":1446342108}],"date_uploaded":"2015-10-31
+        21:41:46","date_uploaded_unix":1446342106}},"@meta":{"server_time":1468853208,"server_timezone":"EST5EDT","api_version":2,"execution_time":"0
         ms"}}'
     http_version: 
-  recorded_at: Mon, 14 Sep 2015 23:00:12 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Mon, 18 Jul 2016 14:46:48 GMT
+recorded_with: VCR 3.0.3

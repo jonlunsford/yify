@@ -7,7 +7,7 @@ module Yify
 
     attr_accessor :application_key
 
-    base_uri 'http://yts.ag/api/v2'
+    base_uri 'https://yts.ag/api/v2'
     format :json
 
     def initialize(application_key = nil)
@@ -34,7 +34,7 @@ module Yify
     # @returns [Yify::Models::Movie]
 
     def list_movies(params)
-      data = self.class.get("/list_movies", { query: params })
+      data = self.class.get("/list_movies.json", { query: params })
       Yify::Response.new(data, :movies)
     end
 
@@ -51,7 +51,7 @@ module Yify
     # @returns Yify::Models::Movie
 
     def movie_details(params)
-      data = self.class.get("/movie_details", { query: params })
+      data = self.class.get("/movie_details.json", { query: params })
       Yify::Response.new(data, :movie)
     end
 
@@ -66,8 +66,8 @@ module Yify
     # @returns [Yify::Models::Movie]
 
     def movie_suggestions(movie_id)
-      data = self.class.get("/movie_suggestions", { query: { movie_id: movie_id } })
-      Yify::Response.new(data, :movie_suggestions)
+      data = self.class.get("/movie_suggestions.json", { query: { movie_id: movie_id } })
+      Yify::Response.new(data, :movies)
     end
 
     # [GET] movie_comments
@@ -79,10 +79,14 @@ module Yify
     #   movie_id: Integer (required)
     #
     # @returns [Yify::Models::Comment]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def movie_comments(movie_id)
-      data = self.class.get("/movie_comments", { query: { movie_id: movie_id } })
-      Yify::Response.new(data, :comments)
+      #data = self.class.get("/movie_comments.json", { query: { movie_id: movie_id } })
+      #Yify::Response.new(data, :comments)
+
+      nil
     end
 
     # [GET] movie_reviews
@@ -94,10 +98,14 @@ module Yify
     #   movie_id: Integer (required)
     #
     # @returns [Yify::Models::Review]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def movie_reviews(movie_id)
-      data = self.class.get("/movie_reviews", { query: { movie_id: movie_id } })
-      Yify::Response.new(data, :reviews)
+      #data = self.class.get("/movie_reviews", { query: { movie_id: movie_id } })
+      #Yify::Response.new(data, :reviews)
+
+      nil
     end
 
     # [GET] movie_parental_guides
@@ -109,10 +117,14 @@ module Yify
     #   movie_id: Integer (required)
     #
     # @returns [Yify::Models::ParentalGuide]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def movie_parental_guides(movie_id)
-      data = self.class.get("/movie_parental_guides", { query: { movie_id: movie_id } })
-      Yify::Response.new(data, :parental_guides)
+      #data = self.class.get("/movie_parental_guides", { query: { movie_id: movie_id } })
+      #Yify::Response.new(data, :parental_guides)
+
+      nil
     end
 
     # [GET] list_upcoming
@@ -121,10 +133,14 @@ module Yify
     # A list of all upcoming movies.
     #
     # @returns [Yify::Models::UpcomingMovie]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def list_upcoming
-      data = self.class.get("/list_upcoming")
-      Yify::Response.new(data, :upcoming_movies)
+      #data = self.class.get("/list_upcoming")
+      #Yify::Response.new(data, :upcoming_movies)
+
+      nil
     end
 
     # [GET] user_details
@@ -137,10 +153,14 @@ module Yify
     #   with_recently_downloaded: Boolean
     #
     # @returns Yify::Models::User
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_details(params)
-      data = self.class.get("/user_details", { query: params })
-      Yify::Response.new(data, :user)
+      #data = self.class.get("/user_details", { query: params })
+      #Yify::Response.new(data, :user)
+
+      nil
     end
 
     # [POST] get_user_key
@@ -155,10 +175,14 @@ module Yify
     #   application_key: String
     #
     # @returns [Yify::Models::Session]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_get_key(params)
-      data = self.class.post("/user_get_key", { body: post_params(params) })
-      Yify::Response.new(data, :session)
+      #data = self.class.post("/user_get_key", { body: post_params(params) })
+      #Yify::Response.new(data, :session)
+
+      nil
     end
 
     # [GET] user_profile
@@ -170,10 +194,14 @@ module Yify
     #   user_key: String (required) response from user_get_key
     #
     # @returns Yify::Models::User
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_profile(user_key)
-      data = self.class.get("/user_profile", { query: { user_key: user_key } })
-      Yify::Response.new(data, :user)
+      #data = self.class.get("/user_profile", { query: { user_key: user_key } })
+      #Yify::Response.new(data, :user)
+
+      nil
     end
 
     # [POST] user_edit_settings
@@ -189,10 +217,14 @@ module Yify
     #   avatar_image: img, jpg, jpef, gif, png (10MB max)
     #
     # @returns Yify::Models::User
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_edit_settings(params)
-      data = self.class.post("/user_edit_settings", { body: post_params(params) })
-      Yify::Response.new(data, :user)
+      #data = self.class.post("/user_edit_settings", { body: post_params(params) })
+      #Yify::Response.new(data, :user)
+
+      nil
     end
 
     # [POST] user_register
@@ -207,10 +239,14 @@ module Yify
     #   email: String (required)
     #
     # @returns Yify::Models::Session
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_register(params)
-      data = self.class.post("/user_register", { body: post_params(params) })
-      Yify::Response.new(data, :session)
+      #data = self.class.post("/user_register", { body: post_params(params) })
+      #Yify::Response.new(data, :session)
+
+      nil
     end
 
     # [POST] user_forgot_password
@@ -223,10 +259,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_forgot_password(params)
-      data = self.class.post("/user_forgot_password", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/user_forgot_password", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] user_reset_password
@@ -240,10 +280,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::Session
+    #
+    # ENDPONT NO LONGER WORKS
 
     def user_reset_password(params)
-      data = self.class.post("/user_reset_password", { body: post_params(params) })
-      Yify::Response.new(data, :session)
+      #data = self.class.post("/user_reset_password", { body: post_params(params) })
+      #Yify::Response.new(data, :session)
+
+      nil
     end
 
     # [POST] like_movie
@@ -257,10 +301,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def like_movie(params)
-      data = self.class.post("/like_movie", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/like_movie", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [GET] get_movie_bookmarks
@@ -273,10 +321,14 @@ module Yify
     #   with_rt_rattings: Boolean
     #
     # @returns [Yify::Models::Bookmark]
+    #
+    # ENDPONT NO LONGER WORKS
 
     def get_movie_bookmarks(params)
-      data = self.class.get("/get_movie_bookmarks", { query: params })
-      Yify::Response.new(data, :bookmarks)
+      #data = self.class.get("/get_movie_bookmarks", { query: params })
+      #Yify::Response.new(data, :bookmarks)
+
+      nil
     end
 
     # [POST] add_movie_bookmark
@@ -290,10 +342,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::Bookmark
+    #
+    # ENDPONT NO LONGER WORKS
 
     def add_movie_bookmark(params)
-      data = self.class.post("/add_movie_bookmark", { body: post_params(params) })
-      Yify::Response.new(data, :bookmark)
+      #data = self.class.post("/add_movie_bookmark", { body: post_params(params) })
+      #Yify::Response.new(data, :bookmark)
+
+      nil
     end
 
     # [POST] delete_movie_bookmark
@@ -307,10 +363,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::Bookmark
+    #
+    # ENDPONT NO LONGER WORKS
 
     def delete_movie_bookmark(params)
-      data = self.class.post("/delete_movie_bookmark", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/delete_movie_bookmark", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] make_comment
@@ -325,10 +385,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def make_comment(params)
-      data = self.class.post("/make_comment", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/make_comment", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] like_comment
@@ -342,10 +406,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def like_comment(params)
-      data = self.class.post("/like_comment", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/like_comment", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] report_comment
@@ -359,10 +427,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def report_comment(params)
-      data = self.class.post("/report_comment", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/report_comment", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] delete_comment
@@ -376,10 +448,14 @@ module Yify
     #   application_key: String (required)
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def delete_comment(params)
-      data = self.class.post("/delete_comment", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/delete_comment", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
     # [POST] make_request
@@ -394,10 +470,14 @@ module Yify
     #   request_message: String
     #
     # @returns Yify::Models::ApiResponse
+    #
+    # ENDPONT NO LONGER WORKS
 
     def make_request(params)
-      data = self.class.post("/make_request", { body: post_params(params) })
-      Yify::Response.new(data, :api_response)
+      #data = self.class.post("/make_request", { body: post_params(params) })
+      #Yify::Response.new(data, :api_response)
+
+      nil
     end
 
   end

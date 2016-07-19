@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://yts.ag/api/v2/movie_suggestions?movie_id=353
+    uri: https://yts.ag/api/v2/movie_suggestions.json?movie_id=353
     body:
       encoding: US-ASCII
       string: ''
@@ -18,52 +18,153 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
       Date:
-      - Tue, 15 Sep 2015 17:55:00 GMT
+      - Mon, 18 Jul 2016 14:47:02 GMT
       Content-Type:
-      - application/json
-      Content-Length:
-      - '4384'
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Set-Cookie:
+      - PHPSESSID=8j981k0lomhk6qj9hhg520kmi2; path=/
+      - __cfduid=d1176958e21df763af140b4d73a5049f61468853221; expires=Tue, 18-Jul-17
+        14:47:01 GMT; path=/; domain=.yts.ag; HttpOnly
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+      Expires:
+      - Mon, 25 Jul 2016 14:47:02 GMT
       Cache-Control:
-      - public, s-maxage=21600
+      - max-age=604800
+      Pragma:
+      - no-cache
+      X-Varnish:
+      - '425183778'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish-v4
+      Strict-Transport-Security:
+      - max-age=15638400
+      - max-age=63072000; preload
       Access-Control-Allow-Origin:
       - "*"
       X-Frame-Options:
-      - SAMEORIGIN
-      - SAMEORIGIN
+      - DENY
       X-Content-Type-Options:
       - nosniff
-      - nosniff
-      Age:
-      - '0'
-      X-Cache:
-      - uncached
-      Accept-Ranges:
-      - bytes
-      X-Frontend:
-      - CA
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2c46b9faa03711c5-SJC
     body:
       encoding: UTF-8
-      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_suggestions_count":4,"movie_suggestions":[{"id":18,"url":"http:\/\/yts.ag\/movie\/the-insider-1999","imdb_code":"tt0140352","title":"The
-        Insider","title_long":"The Insider (1999)","slug":"the-insider-1999","year":1999,"rating":7.9,"runtime":157,"genres":["Biography","Drama"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Insider_1999\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Insider_1999\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/B5D813ED4D8BAE8E8EE49A30C2C5616506408016.torrent","hash":"B5D813ED4D8BAE8E8EE49A30C2C5616506408016","quality":"720p","seeds":119,"peers":10,"size":"649.25
-        MB","size_bytes":680787968,"date_uploaded":"2011-08-05 02:00:30","date_uploaded_unix":1312466430}],"date_uploaded":"2011-08-05
-        02:00:30","date_uploaded_unix":1312466430},{"id":190,"url":"http:\/\/yts.ag\/movie\/remember-the-titans-2000","imdb_code":"tt0210945","title":"Remember
-        the Titans","title_long":"Remember the Titans (2000)","slug":"remember-the-titans-2000","year":2000,"rating":7.8,"runtime":120,"genres":["Biography","Drama"],"language":"English","mpa_rating":"PG","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Remember_the_Titans_2000\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/Remember_the_Titans_2000\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/BD44A37107F1203316F979D696BDB781A6F464A4.torrent","hash":"BD44A37107F1203316F979D696BDB781A6F464A4","quality":"720p","seeds":128,"peers":19,"size":"599.40
-        MB","size_bytes":628516454,"date_uploaded":"2011-09-10 02:43:10","date_uploaded_unix":1315579390}],"date_uploaded":"2011-09-10
-        02:43:10","date_uploaded_unix":1315579390},{"id":159,"url":"http:\/\/yts.ag\/movie\/the-pianist-2002","imdb_code":"tt0253474","title":"The
-        Pianist","title_long":"The Pianist (2002)","slug":"the-pianist-2002","year":2002,"rating":8.5,"runtime":150,"genres":["Biography","Drama"],"language":"English","mpa_rating":"R","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Pianist_2002\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/The_Pianist_2002\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/5B35B2C94B288DD9F8970A38410975467BF662EE.torrent","hash":"5B35B2C94B288DD9F8970A38410975467BF662EE","quality":"720p","seeds":270,"peers":49,"size":"899.22
-        MB","size_bytes":942900511,"date_uploaded":"2011-09-03 19:37:22","date_uploaded_unix":1315035442},{"url":"http:\/\/yts.ag\/torrent\/download\/3B66ADB093195AE1BC5A832352F9E41DD77CF980.torrent","hash":"3B66ADB093195AE1BC5A832352F9E41DD77CF980","quality":"1080p","seeds":251,"peers":48,"size":"2.00
-        GB","size_bytes":2147483648,"date_uploaded":"2012-10-31 18:41:56","date_uploaded_unix":1351662116}],"date_uploaded":"2011-09-03
-        19:37:22","date_uploaded_unix":1315035442},{"id":1125,"url":"http:\/\/yts.ag\/movie\/a-beautiful-mind-2001","imdb_code":"tt0268978","title":"A
-        Beautiful Mind","title_long":"A Beautiful Mind (2001)","slug":"a-beautiful-mind-2001","year":2001,"rating":8.2,"runtime":135,"genres":["Biography","Drama"],"language":"English","mpa_rating":"PG-13","small_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/A_Beautiful_Mind_2001\/small-cover.jpg","medium_cover_image":"http:\/\/s.ynet.io\/assets\/images\/movies\/A_Beautiful_Mind_2001\/medium-cover.jpg","state":"ok","torrents":[{"url":"http:\/\/yts.ag\/torrent\/download\/831FD96B0363AB0038EC9427BC17C5911117C8E2.torrent","hash":"831FD96B0363AB0038EC9427BC17C5911117C8E2","quality":"720p","seeds":469,"peers":73,"size":"801.43
-        MB","size_bytes":840360264,"date_uploaded":"2012-09-02 01:15:24","date_uploaded_unix":1346505324},{"url":"http:\/\/yts.ag\/torrent\/download\/9CA50DA836B52A6BCB06AAA91BB2478FD96F5DD0.torrent","hash":"9CA50DA836B52A6BCB06AAA91BB2478FD96F5DD0","quality":"1080p","seeds":245,"peers":42,"size":"1.04
-        GB","size_bytes":1116691497,"date_uploaded":"2012-09-02 01:21:18","date_uploaded_unix":1346505678}],"date_uploaded":"2012-09-02
-        01:15:24","date_uploaded_unix":1346505324}]},"@meta":{"server_time":1442339700,"server_timezone":"Pacific\/Auckland","api_version":2,"execution_time":"56.27
+      string: '{"status":"ok","status_message":"Query was successful","data":{"movie_count":4,"movies":[{"id":4119,"url":"https:\/\/yts.ag\/movie\/what-maisie-knew-2012","imdb_code":"tt1932767","title":"What
+        Maisie Knew","title_english":"What Maisie Knew","title_long":"What Maisie
+        Knew (2012)","slug":"what-maisie-knew-2012","year":2012,"rating":7.5,"runtime":93,"genres":["Action","Drama"],"summary":"What
+        Maisie Knew is a contemporary New York City revisioning of the Henry James
+        novel by the same name. It revolves around unwitting 7-year-old Maisie, caught
+        in the middle of a custody battle between her mother Susanna, an aging rock
+        star, and her father, Beale, a major art dealer.","description_full":"What
+        Maisie Knew is a contemporary New York City revisioning of the Henry James
+        novel by the same name. It revolves around unwitting 7-year-old Maisie, caught
+        in the middle of a custody battle between her mother Susanna, an aging rock
+        star, and her father, Beale, a major art dealer.","synopsis":"What Maisie
+        Knew is a contemporary New York City revisioning of the Henry James novel
+        by the same name. It revolves around unwitting 7-year-old Maisie, caught in
+        the middle of a custody battle between her mother Susanna, an aging rock star,
+        and her father, Beale, a major art dealer.","yt_trailer_code":"GHHt5eYl95c","language":"English","mpa_rating":"R","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/What_Maisie_Knew_2012\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/What_Maisie_Knew_2012\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/What_Maisie_Knew_2012\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/What_Maisie_Knew_2012\/medium-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/D8A17E71C6087763269A3AB2A2981D1DADADDFD8.torrent","hash":"D8A17E71C6087763269A3AB2A2981D1DADADDFD8","quality":"720p","seeds":15,"peers":1,"size":"759.34
+        MB","size_bytes":796225700,"date_uploaded":"2015-11-01 04:05:32","date_uploaded_unix":1446368732},{"url":"https:\/\/yts.ag\/torrent\/download\/DE957191A0F8DEBA3A1EB24DBA2DB09D8695117B.torrent","hash":"DE957191A0F8DEBA3A1EB24DBA2DB09D8695117B","quality":"1080p","seeds":5,"peers":2,"size":"1.45
+        GB","size_bytes":1556925645,"date_uploaded":"2015-11-01 04:05:34","date_uploaded_unix":1446368734}],"date_uploaded":"2015-11-01
+        04:05:32","date_uploaded_unix":1446368732},{"id":4975,"url":"https:\/\/yts.ag\/movie\/congo-the-grand-inga-project-2013","imdb_code":"tt2509902","title":"Congo:
+        The Grand Inga Project","title_english":"Congo: The Grand Inga Project","title_long":"Congo:
+        The Grand Inga Project (2013)","slug":"congo-the-grand-inga-project-2013","year":2013,"rating":7.2,"runtime":60,"genres":["Action","Adventure","Documentary","Sport"],"summary":"CONGO:
+        The Grand Inga Project chronicles kayak icon Steve Fisher as he and a team
+        of the bravest and most talented paddlers on earth tackle a first descent
+        of the Inga Rapids, a deadly stretch of whitewater in the heart of the Democratic
+        Republic of Congo.","description_full":"CONGO: The Grand Inga Project chronicles
+        kayak icon Steve Fisher as he and a team of the bravest and most talented
+        paddlers on earth tackle a first descent of the Inga Rapids, a deadly stretch
+        of whitewater in the heart of the Democratic Republic of Congo.","synopsis":"CONGO:
+        The Grand Inga Project chronicles kayak icon Steve Fisher as he and a team
+        of the bravest and most talented paddlers on earth tackle a first descent
+        of the Inga Rapids, a deadly stretch of whitewater in the heart of the Democratic
+        Republic of Congo.","yt_trailer_code":"N1glN7aZyEQ","language":"English","mpa_rating":"Unrated","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/congo_the_grand_inga_project_2013\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/congo_the_grand_inga_project_2013\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/congo_the_grand_inga_project_2013\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/congo_the_grand_inga_project_2013\/medium-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/91021F90E8939F3820DFB52EEA1F775FE80372FB.torrent","hash":"91021F90E8939F3820DFB52EEA1F775FE80372FB","quality":"720p","seeds":9,"peers":3,"size":"592.11
+        MB","size_bytes":620872335,"date_uploaded":"2016-01-22 04:18:15","date_uploaded_unix":1453454295},{"url":"https:\/\/yts.ag\/torrent\/download\/DB5486F14CDEA7C15668F7F160996903A7A00D15.torrent","hash":"DB5486F14CDEA7C15668F7F160996903A7A00D15","quality":"1080p","seeds":15,"peers":1,"size":"1.23
+        GB","size_bytes":1320702444,"date_uploaded":"2016-01-22 07:00:40","date_uploaded_unix":1453464040}],"date_uploaded":"2016-01-22
+        04:18:15","date_uploaded_unix":1453454295},{"id":2259,"url":"https:\/\/yts.ag\/movie\/original-sin-2001","imdb_code":"tt0218922","title":"Original
+        Sin","title_english":"Original Sin","title_long":"Original Sin (2001)","slug":"original-sin-2001","year":2001,"rating":6,"runtime":116,"genres":["Action","Drama","Mystery","Romance","Thriller"],"summary":"When
+        a man selects a mail order bride, he is surprised to see the beauty who appears
+        before him. She alleges that she sent false photos to him to assure that he
+        would love her for what she is and not for her beauty. However, what she is
+        is a con artist, prostitute, and actress, who teams with a fellow actor to
+        steal money from men. What she does not expect is that she falls in love with
+        her new husband and ultimately must decide between him and her sadistic former
+        lover. Contains explicit sex including sadistic acts as Thomas Jane cuts Jolie''s
+        back with a knife as part of their lovemaking.","description_full":"When a
+        man selects a mail order bride, he is surprised to see the beauty who appears
+        before him. She alleges that she sent false photos to him to assure that he
+        would love her for what she is and not for her beauty. However, what she is
+        is a con artist, prostitute, and actress, who teams with a fellow actor to
+        steal money from men. What she does not expect is that she falls in love with
+        her new husband and ultimately must decide between him and her sadistic former
+        lover. Contains explicit sex including sadistic acts as Thomas Jane cuts Jolie''s
+        back with a knife as part of their lovemaking.","synopsis":"When a man selects
+        a mail order bride, he is surprised to see the beauty who appears before him.
+        She alleges that she sent false photos to him to assure that he would love
+        her for what she is and not for her beauty. However, what she is is a con
+        artist, prostitute, and actress, who teams with a fellow actor to steal money
+        from men. What she does not expect is that she falls in love with her new
+        husband and ultimately must decide between him and her sadistic former lover.
+        Contains explicit sex including sadistic acts as Thomas Jane cuts Jolie''s
+        back with a knife as part of their lovemaking.","yt_trailer_code":"1UAosR_9XJ0","language":"English","mpa_rating":"Unrated","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/Original_Sin_2001\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/Original_Sin_2001\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Original_Sin_2001\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Original_Sin_2001\/medium-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/99F5376D84643AF9538104FE56503E54F4828415.torrent","hash":"99F5376D84643AF9538104FE56503E54F4828415","quality":"720p","seeds":95,"peers":19,"size":"800.24
+        MB","size_bytes":839112458,"date_uploaded":"2015-11-01 01:32:31","date_uploaded_unix":1446355951},{"url":"https:\/\/yts.ag\/torrent\/download\/B5E9935306BF4FD67C209792489B7CE270FD376F.torrent","hash":"B5E9935306BF4FD67C209792489B7CE270FD376F","quality":"1080p","seeds":28,"peers":8,"size":"1.75
+        GB","size_bytes":1879048192,"date_uploaded":"2015-11-01 01:32:33","date_uploaded_unix":1446355953}],"date_uploaded":"2015-11-01
+        01:32:31","date_uploaded_unix":1446355951},{"id":129,"url":"https:\/\/yts.ag\/movie\/abduction-2011","imdb_code":"tt1600195","title":"Abduction","title_english":"Abduction","title_long":"Abduction
+        (2011)","slug":"abduction-2011","year":2011,"rating":5,"runtime":106,"genres":["Action","Mystery","Thriller"],"summary":"High
+        school seniors Nathan and Karen find a website with photos of children who
+        are missing or believed abducted. One of the photos is of Nathan as a child,
+        putting into question the identities of the couple whom he''s always called
+        Mom and Dad. Contacting the site to learn more only results in Nathan becoming
+        the target of an intense, high-tech, international manhunt. Before his \"parents\"
+        can explain themselves, they are executed by hired guns, and Nathan is on
+        the run with Karen in tow (who just happened to be there at the wrong time).
+        Phone use by either of them only connects directly to a man claiming to be
+        C.I.A., in whom they find reasons not to trust. With encroaching shootouts,
+        car chases, hand-to-hand combat and explosions around them, this seems quite
+        much for a mere case of child abduction, and Nathan can only rely on the wrestling,
+        boxing and martial arts skills taught by his \"dad\" to protect both himself
+        and Karen as they follow a lead to find Martin, Nathan''s biological ...","description_full":"High
+        school seniors Nathan and Karen find a website with photos of children who
+        are missing or believed abducted. One of the photos is of Nathan as a child,
+        putting into question the identities of the couple whom he''s always called
+        Mom and Dad. Contacting the site to learn more only results in Nathan becoming
+        the target of an intense, high-tech, international manhunt. Before his \"parents\"
+        can explain themselves, they are executed by hired guns, and Nathan is on
+        the run with Karen in tow (who just happened to be there at the wrong time).
+        Phone use by either of them only connects directly to a man claiming to be
+        C.I.A., in whom they find reasons not to trust. With encroaching shootouts,
+        car chases, hand-to-hand combat and explosions around them, this seems quite
+        much for a mere case of child abduction, and Nathan can only rely on the wrestling,
+        boxing and martial arts skills taught by his \"dad\" to protect both himself
+        and Karen as they follow a lead to find Martin, Nathan''s biological ...","synopsis":"High
+        school seniors Nathan and Karen find a website with photos of children who
+        are missing or believed abducted. One of the photos is of Nathan as a child,
+        putting into question the identities of the couple whom he''s always called
+        Mom and Dad. Contacting the site to learn more only results in Nathan becoming
+        the target of an intense, high-tech, international manhunt. Before his \"parents\"
+        can explain themselves, they are executed by hired guns, and Nathan is on
+        the run with Karen in tow (who just happened to be there at the wrong time).
+        Phone use by either of them only connects directly to a man claiming to be
+        C.I.A., in whom they find reasons not to trust. With encroaching shootouts,
+        car chases, hand-to-hand combat and explosions around them, this seems quite
+        much for a mere case of child abduction, and Nathan can only rely on the wrestling,
+        boxing and martial arts skills taught by his \"dad\" to protect both himself
+        and Karen as they follow a lead to find Martin, Nathan''s biological ...","yt_trailer_code":"CEVkp5Je7m0","language":"English","mpa_rating":"PG-13","background_image":"https:\/\/yts.ag\/assets\/images\/movies\/Abduction_2011\/background.jpg","background_image_original":"https:\/\/yts.ag\/assets\/images\/movies\/Abduction_2011\/background.jpg","small_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Abduction_2011\/small-cover.jpg","medium_cover_image":"https:\/\/yts.ag\/assets\/images\/movies\/Abduction_2011\/medium-cover.jpg","state":"ok","torrents":[{"url":"https:\/\/yts.ag\/torrent\/download\/65320050A2DD5E7039953C7E7407E0441A7E2B64.torrent","hash":"65320050A2DD5E7039953C7E7407E0441A7E2B64","quality":"720p","seeds":227,"peers":43,"size":"700.42
+        MB","size_bytes":734443602,"date_uploaded":"2015-10-31 21:06:46","date_uploaded_unix":1446340006},{"url":"https:\/\/yts.ag\/torrent\/download\/CD3EF1CF4F802B7A9B62B9940B0603970040E719.torrent","hash":"CD3EF1CF4F802B7A9B62B9940B0603970040E719","quality":"1080p","seeds":118,"peers":29,"size":"1.61
+        GB","size_bytes":1728724337,"date_uploaded":"2016-07-04 20:44:57","date_uploaded_unix":1467679497}],"date_uploaded":"2015-10-31
+        21:06:46","date_uploaded_unix":1446340006}]},"@meta":{"server_time":1468853222,"server_timezone":"EST5EDT","api_version":2,"execution_time":"0
         ms"}}'
     http_version: 
-  recorded_at: Tue, 15 Sep 2015 17:55:00 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Mon, 18 Jul 2016 14:47:02 GMT
+recorded_with: VCR 3.0.3
